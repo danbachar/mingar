@@ -5,3 +5,4 @@ server/.idea/
 .idea/
 
 node_modules/
+**.xcuserstate

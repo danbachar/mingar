@@ -8,7 +8,7 @@ let config = {
   username: 'mingar',
   password: 'mingar',
   database: 'mingar',
-  synchronize: false,
+  synchronize: true,
   schema: 'public',
   extra: {
     ssl: process.env.POSTGRES_SSL == 'true' ? true : false
@@ -37,7 +37,5 @@ if (process.env.DATABASE_URL != null) {
   config.password = options.password;
   config.database = options.database;
 }
-
-config.synchronize = process.env.DATABASE_SYNCHRONIZE || false;
 
 module.exports = config;

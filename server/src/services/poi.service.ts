@@ -7,7 +7,10 @@ import { POI } from '../entity/poi.entity';
 
 @Injectable()
 export class PoiService {
-    constructor(@Inject(DbConstants.POI_REPOSITORY) private readonly poiRepo: Repository<POI>) { }
+    private readonly MINIMUM_DISTANCE_IN_METERS_TO_VISIT = 5;
+
+    constructor(@Inject(DbConstants.POI_REPOSITORY) private readonly poiRepo: Repository<POI>,
+                private readonly locationService: LocationService) { }
 
     async getAll(): Promise<POI[]> {
         return this.poiRepo.find();
@@ -46,3 +49,18 @@ export class PoiService {
 
         return sortedArray;
     }
+
+    public async canVisitPOI(id: string, userLocation: LocationDTO): Promise<boolean> {
+        const poi = await this.poiRepo.findOne(id);
+
+        if (!poi) {
+            return false;
+        }
+
+        const poiLocation: LocationDTO = { long: poi.long, lat: poi.lat };
+
+        const distanceBetweenUserAndPOI = this.locationService.calculateDistance(userLocation, poiLocation);
+
+        return distanceBetweenUserAndPOI <= this.MINIMUM_DISTANCE_IN_METERS_TO_VISIT;
+    }
+}

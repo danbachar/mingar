@@ -75,4 +75,10 @@ export class PoiController {
       res.status(200).send(achievementsUnlocked);
   }
 
+  @Patch(':id')
+  rankPOI(@Param('id')id: string, @Req() req: Request): Promise<POI> {
+    const body = req.body as { rank: number|string }; // because nest sucks with transmitting primal values in the body
+    // tslint:disable-next-line:radix
+    return this.poiService.rankPOI(id, parseInt(body.rank as string));
+  }
 }

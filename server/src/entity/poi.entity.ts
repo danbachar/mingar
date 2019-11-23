@@ -25,7 +25,7 @@ export class POI {
     @Column({type: 'double precision'})
     public long: number;
 
-    @Column({type: 'double precision', default: 0 })
+    @Column({type: 'double precision', default: -1 })
     public ranking: number;
 
     @ManyToMany(() => Achievement, achv => achv.pois)

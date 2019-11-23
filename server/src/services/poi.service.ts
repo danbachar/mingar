@@ -4,6 +4,8 @@ import { DbConstants } from './../consts/db.consts';
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { POI } from '../entity/poi.entity';
+import { LoggerFactory } from '../utils/LoggerFactory';
+const logger = LoggerFactory(module);
 
 @Injectable()
 export class PoiService {
@@ -62,5 +64,18 @@ export class PoiService {
         const distanceBetweenUserAndPOI = this.locationService.calculateDistanceInMeters(userLocation, poiLocation);
 
         return distanceBetweenUserAndPOI <= this.MINIMUM_DISTANCE_IN_METERS_TO_VISIT;
+    }
+
+    public async rankPOI(id: string, rank: number): Promise<POI> {
+        const poi = await this.poiRepo.findOne(id);
+
+        if (!poi) {
+            return {} as POI;
+        }
+
+        poi.ranking = poi.ranking != -1 ? (poi.ranking + rank) / 2 : rank;
+        poi.ranking = poi.ranking > 5 ? 5 : poi.ranking;
+        poi.ranking = poi.ranking < 0 ? 0 : poi.ranking;
+        return this.poiRepo.save(poi);
     }
 }

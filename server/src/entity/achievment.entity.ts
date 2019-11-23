@@ -18,4 +18,10 @@ export class Achievment {
 
     @ManyToMany(() => POI, poi => poi.achievments)
     public pois: POI[];
+
+    @Column({ default: 0 })
+    public achievmentType: number;
+
+    @Column()
+    public requiredNumberOfPOIs: number;
 }

@@ -1,5 +1,5 @@
 import { POI } from './poi.entity';
-import { Achievment } from './achievment.entity';
+import { Achievement } from './achievement.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToMany, JoinTable } from 'typeorm';
 import { Note } from './note.entity';
 
@@ -26,9 +26,9 @@ export class User {
     @OneToMany(type => Note, note => note.creatingUser)
     public notes: Note[];
 
-    @ManyToMany(type => Achievment)
+    @ManyToMany(type => Achievement)
     @JoinTable()
-    public achievments: Achievment[];
+    public achievements: Achievement[];
 
     @ManyToMany(() => POI, poi => poi.usersVisited)
     @JoinTable()

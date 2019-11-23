@@ -1,6 +1,6 @@
 
 export const DbConstants = {
-    ACHIEVMENT_REPOSITORY: 'AchievmentRepositoryToken',
+    ACHIEVEMENT_REPOSITORY: 'AchievementRepositoryToken',
     FILE_REPOSITORY: 'FileERepositoryToken',
     IMAGE_REPOSITORY: 'ImageRepositoryToken',
     MODEL_REPOSITORY: 'ModelRepositoryToken',

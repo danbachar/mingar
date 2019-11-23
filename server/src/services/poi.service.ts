@@ -10,4 +10,14 @@ export class PoiService {
     async getAll(): Promise<POI[]> {
         return this.poiRepo.find();
     }
+
+    async createNewPoi(title: string, description: string, lat: number, long: number): Promise<POI> {
+        const poi = new POI();
+        poi.title = title;
+        poi.description = description;
+        poi.long = long;
+        poi.lat = lat;
+
+        return this.poiRepo.save(poi);
+    }
 }

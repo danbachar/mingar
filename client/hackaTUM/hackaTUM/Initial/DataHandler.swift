@@ -58,7 +58,7 @@ class Promise<Value>: Future<Value> {
 
 // Caseless enum to avoid instantiation
 enum DataHandler {
-    static func getAllPOI(in radius: Int, long: Double, lat: Double) -> Future<[POI]> {
+    static func getAllPOI(in radius: Double, long: Double, lat: Double) -> Future<[POI]> {
         let session = URLSession(configuration: .default)
         let promise = Promise<[POI]>()
         guard let url = URL(string: "http://131.159.210.130:3000/api/poi/\(radius)") else {

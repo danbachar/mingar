@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Vz-4n-CzD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V4W-r5-J4I">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,9 +31,6 @@
                                 <rect key="frame" x="485" y="714" width="54" height="38"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="YPQ-iw-ckJ" kind="show" id="jZQ-I1-LS4"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ss8-sg-c5m">
                                 <rect key="frame" x="412" y="601" width="200" height="34"/>
@@ -88,9 +85,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqx-fz-aCJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1081.0546875" y="687.5"/>
+            <point key="canvasLocation" x="-638" y="-788"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map View-->
         <scene sceneID="tTG-4X-eVd">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="YPQ-iw-ckJ" customClass="MapViewController" customModule="hackaTUM" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,16 +96,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Sx-Nu-ovG">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="718"/>
                             </mapView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkZ-y5-db8">
-                                <rect key="frame" x="48" y="48" width="256" height="384"/>
+                                <rect key="frame" x="48" y="48" width="256" height="359"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q7q-cd-e2Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="256" height="384"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="359"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kJu-8h-ETd">
-                                            <rect key="frame" x="8" y="8" width="240" height="368"/>
+                                            <rect key="frame" x="8" y="8" width="240" height="343"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <prototypes>
                                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" textLabel="ja4-H0-1Fs" detailTextLabel="miH-o4-BGK" style="IBUITableViewCellStyleValue1" id="iXR-kr-dRx">
@@ -161,6 +158,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eYo-lS-oAa"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Map View" id="f8q-Yl-rCM"/>
                     <navigationItem key="navigationItem" id="TJx-dp-QQJ"/>
                     <connections>
                         <outlet property="mapView" destination="5Sx-Nu-ovG" id="am0-oa-NFn"/>
@@ -169,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQ3-nX-4YF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-252.53906249999997" y="687.5"/>
+            <point key="canvasLocation" x="482" y="-116"/>
         </scene>
         <!--Location Detail View Controller-->
         <scene sceneID="mCL-Sy-wXg">
@@ -278,9 +276,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJ1-77-vjj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412.5" y="687.5"/>
+            <point key="canvasLocation" x="1240" y="-116"/>
         </scene>
-        <!--User View Controller-->
+        <!--User-->
         <scene sceneID="RsU-bt-SdX">
             <objects>
                 <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="cR5-nm-7uO" customClass="UserViewController" customModule="hackaTUM" customModuleProvider="target" sceneMemberID="viewController">
@@ -293,10 +291,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-eg-qNB">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="718"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbI-gW-QOu">
-                                        <rect key="frame" x="0.0" y="310" width="1024" height="458"/>
+                                        <rect key="frame" x="0.0" y="310" width="1024" height="408"/>
                                         <color key="backgroundColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -414,7 +412,7 @@
                                         </connections>
                                     </collectionView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s0Q-0p-dy3">
-                                        <rect key="frame" x="33" y="526" width="958" height="260"/>
+                                        <rect key="frame" x="33" y="526" width="958" height="210"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="xhg-BH-LbG">
@@ -509,6 +507,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N3N-ht-CqN"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="User" id="4nY-cm-Q0P"/>
                     <connections>
                         <outlet property="bgggLabel" destination="ssk-Em-a5z" id="rVO-YD-FoR"/>
                         <outlet property="collectionView" destination="pQt-bs-7aj" id="Xqm-HT-gJt"/>
@@ -520,13 +519,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAR-0h-fqM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096.875" y="687.5"/>
+            <point key="canvasLocation" x="482" y="764"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EKj-nl-e5W">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="V4W-r5-J4I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Twv-Au-ful">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YPQ-iw-ckJ" kind="relationship" relationship="viewControllers" id="vgt-rY-8Qb"/>
+                        <segue destination="cR5-nm-7uO" kind="relationship" relationship="viewControllers" id="OdV-ly-0gc"/>
+                        <segue destination="txY-TH-y7C" kind="relationship" relationship="viewControllers" id="Q9Q-IE-frZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkF-iE-4UF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="763"/>
+        </scene>
+        <!--Look around to see where the nearest attractions are-->
+        <scene sceneID="Qq0-ER-iYT">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="txY-TH-y7C" customClass="ARViewController" customModule="hackaTUM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LLe-6D-y6L">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RyD-AT-Zcx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="AR View" id="pUb-Zi-hTQ"/>
+                    <navigationItem key="navigationItem" title="Look around to see where the nearest attractions are" leftItemsSupplementBackButton="YES" id="YqG-t0-AWd">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="R9i-rX-x47"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jhp-13-UTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="1720"/>
         </scene>
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="placeholder" width="512" height="512"/>
-        <image name="profile" width="16" height="16"/>
+        <image name="profile" width="256" height="256"/>
         <image name="trash" catalog="system" width="60" height="64"/>
     </resources>
 </document>

@@ -97,6 +97,7 @@
 				B0B82F6823896246004F58D6 /* Initial */,
 				AC69E86E2389EE0000A64052 /* Profile */,
 				B048029D23893947004FECED /* Assets.xcassets */,
+				B048029A23893943004FECED /* Main.storyboard */,
 				B04802A223893947004FECED /* Info.plist */,
 			);
 			path = hackaTUM;
@@ -115,7 +116,6 @@
 		B0B82F6823896246004F58D6 /* Initial */ = {
 			isa = PBXGroup;
 			children = (
-				B048029A23893943004FECED /* Main.storyboard */,
 				B098A824238959FB00969231 /* MapViewController.swift */,
 				B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */,
 				B0ECFACC2389D0A900E5DE6D /* DataHandler.swift */,
@@ -418,14 +418,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				DEVELOPMENT_TEAM = H45RLDQQ8T;
 				INFOPLIST_FILE = hackaTUM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUMaa;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUMaal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,7 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUMaa;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUMaal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

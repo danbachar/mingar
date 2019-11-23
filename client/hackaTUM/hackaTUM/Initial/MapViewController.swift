@@ -20,7 +20,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     // MARK: - Stored properties
     private var places: [POI] = []
     private let locationManager = CLLocationManager()
-    private var currentRadius = 100.0
+    private var currentRadius = 25000000.0
     private var isFirstLocalization = true
     private var counter = 2
     
@@ -91,11 +91,14 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     private func updatePlaces() {
         log.info("Fetching the POIs for radius: \(currentRadius)")
-        DataHandler.getAllPOI(in: 25000, long: 11.65112, lat: 48.24883).observe(with: {
+        DataHandler.getAllPOI(in: currentRadius, long: 11.65112, lat: 48.24883).observe(with: {
             switch $0 {
             case let .success(tasks):
                 self.places = tasks
                 self.redrawMap()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             case let .failure(error):
                 log.error(error.localizedDescription)
             }
@@ -104,7 +107,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     private func redrawMap() {
         _ = self.places.map { poi in
-            log.info("New annotation for poi")
+//            log.info("New annotation for poi")
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(poi.lat, poi.long)
             annotation.title = poi.title
@@ -124,8 +127,8 @@ extension MapViewController: CLLocationManagerDelegate {
             
             let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(currentLocation.latitude,
                                                                                currentLocation.longitude),
-                                            latitudinalMeters: currentRadius*2,
-                                            longitudinalMeters: currentRadius*2);
+                                            latitudinalMeters: 500.0,
+                                            longitudinalMeters: 500.0);
 
             // Zoom the map to point to the current region
             mapView.setRegion(region, animated: true)
@@ -146,8 +149,8 @@ extension MapViewController: MKMapViewDelegate {
 
         let loc1 = CLLocation(latitude: center.latitude - span.latitudeDelta * 0.5, longitude: center.longitude)
         let loc2 = CLLocation(latitude: center.latitude + span.latitudeDelta * 0.5, longitude: center.longitude)
-        let loc3 = CLLocation(latitude: center.latitude, longitude: center.longitude - span.longitudeDelta * 0.5)
-        let loc4 = CLLocation(latitude: center.latitude, longitude: center.longitude + span.longitudeDelta * 0.5)
+//        let loc3 = CLLocation(latitude: center.latitude, longitude: center.longitude - span.longitudeDelta * 0.5)
+//        let loc4 = CLLocation(latitude: center.latitude, longitude: center.longitude + span.longitudeDelta * 0.5)
 
         // Screen height in meters on map
         let metersInLatitude = loc1.distance(from: loc2)
@@ -158,7 +161,7 @@ extension MapViewController: MKMapViewDelegate {
 //        log.info("currentRadius: \(currentRadius), radius: \(radius)")
         if radius / currentRadius > 2.0 {
             // If the new radius is 2 times bigger than the previous one, fetch the data for a bigger area
-            self.currentRadius = radius
+//            self.currentRadius = radius
             if !isFirstLocalization {
                 updatePlaces()
             }
@@ -177,7 +180,7 @@ extension MapViewController: MKMapViewDelegate {
 
             updatePlaces()
             
-            self.currentRadius = 100.0
+            self.currentRadius = 25000000
         }
     }
 }

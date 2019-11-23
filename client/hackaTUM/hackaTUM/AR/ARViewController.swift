@@ -51,17 +51,32 @@ class ARViewController: UIViewController {
         
         // add a landmark at current location
         guard let location = landmarker.locationManager.location else {
-            print("Nie działa kurwa")
+            log.error("Couldn't retrieve the current location")
             return
         }
         
         guard let image = UIImage(named: "placeholder") else {
-            print("KURWA")
+            log.error("Error while loading placeholder image")
             return
         }
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-        label.text = "KURWA"
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Some location"
+        label.textColor = .green
+        label.font = UIFont(name: "TrebuchetMS-Bold", size: 18)
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
+        view.backgroundColor = .white
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 2
+        view.layer.cornerRadius = 15
+        
+        view.addSubview(label)
+        
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         let location2 = CLLocationCoordinate2DMake(48.2627, 11.6671)
         
@@ -74,12 +89,12 @@ class ARViewController: UIViewController {
                                     timestamp: location.timestamp)
         
         landmarker.addLandmark(image: image, at: cllocation, completion: nil)
-        landmarker.addLandmark(view: label, at: location, completion: nil)
+        landmarker.addLandmark(view: view, at: location, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLayoutSubviews() {
@@ -92,21 +107,6 @@ class ARViewController: UIViewController {
         return String(format: "%.2f km away", distance / 1000)
     }
 }
-
-//extension ARViewController: ListLandmarksDisplayer {
-//    func displayLandmarks(viewModel: ListLandmarks.FetchLandmarks.ViewModel) {
-//        for landmark in viewModel.landmarks {
-//            guard let user = landmarker.locationManager.location else {
-//                print("Couldn't unwrap the location from the location manager")
-//                return
-//            }
-//            let markView = reusableMarker
-//            let location = CLLocation(coordinate: landmark.location.coordinate, altitude: user.altitude + 5, horizontalAccuracy: 1, verticalAccuracy: 1, timestamp: Date())
-//            markView.set(name: landmark.name, detail: format(distance: user.distance(from: landmark.location)))
-//            landmarker.addLandmark(userInfo: [landmarkKey: landmark], view: markView, at: location, completion: nil)
-//        }
-//    }
-//}
 
 extension ARViewController: ARLandmarkerDelegate {
     func landmarkDisplayer(_ landmarkDisplayer: ARLandmarker, didTap landmark: ARLandmark) {
@@ -131,9 +131,3 @@ extension ARViewController: ARLandmarkerDelegate {
         print("Failed! Error: \(error)")
     }
 }
-//
-//extension ARLandmark {
-//    var model: ListLandmarks.FetchLandmarks.ViewModel.Landmark? {
-//        return userInfo["model"] as? ListLandmarks.FetchLandmarks.ViewModel.Landmark
-//    }
-//}

@@ -1,10 +1,10 @@
 import { Achievement } from '../entity/achievement.entity';
 import { PoiService } from '../services/poi.service';
-import { Controller, Get, Post, Body, Param, Res } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Res, Req } from '@nestjs/common';
 import { POI } from '../entity/poi.entity';
 import { LocationDTO } from 'DTO/location.dto';
 import { AchievementService } from '../services/achievement.service';
-import { Response } from 'express';
+import { Response, Request } from 'express';
 import { ACHIEVEMENT} from '../enum/achievement-type.enum';
 
 @Controller('/api/poi')
@@ -24,49 +24,54 @@ export class PoiController {
 
     @Post('visit/:id')
     async markPOIAsVisited(
-      @Param('id') id: string, @Body() location: LocationDTO, @Body() poisVisited: string[], @Res() res: Response): Promise<Achievement[]> {
-      const canVisitPOI = await this.poiService.canVisitPOI(id, location);
+      @Param('id') id: string, @Req() req: Request, @Res() res: Response): Promise<Achievement[]> {
+        const body = req.body as { long: number, lat: number, poisVisited: string[] }; // because transmitting primal type(-arrays) is shit in nest
+        const location: LocationDTO = { long: body.long, lat: body.lat };
 
-      if (!canVisitPOI) {
-        res.status(403).send('POI cannot be visited');
-        return;
-      }
+        const canVisitPOI = await this.poiService.canVisitPOI(id, location);
 
-      const achievementsUnlocked: Achievement[] = [];
+        if (!canVisitPOI) {
+          res.status(403).send('POI cannot be visited');
+          return;
+        }
 
-      const allAchievements = await this.achievementServie.getAllAchievements();
+        const achievementsUnlocked: Achievement[] = [];
 
-      const allSpecificAchievements = allAchievements.filter(achv => achv.achievementType === ACHIEVEMENT.Specific);
+        const allAchievements = await this.achievementServie.getAllAchievements();
 
-      poisVisited.push(id);
-      poisVisited.sort();
-      // check if any POI-specific achievements were unlocked
-      allSpecificAchievements.map(specificAchievement => {
-        if (specificAchievement.pois.length === poisVisited.length) {
-          const sortedPoiIdsPerAchievement = specificAchievement.pois.map(poi => poi.id).sort();
-          let allPOIsForAchievementVisited = true;
+        const allSpecificAchievements = allAchievements.filter(achv => achv.achievementType === ACHIEVEMENT.Specific);
 
-          for (let index = 0; index < sortedPoiIdsPerAchievement.length; index++) {
-            if (sortedPoiIdsPerAchievement[index] !== poisVisited[index]) {
-              allPOIsForAchievementVisited = false;
-              break;
+        body.poisVisited.push(id);
+        body.poisVisited.sort();
+
+        // check if any POI-specific achievements were unlocked
+        allSpecificAchievements.map(specificAchievement => {
+          if (specificAchievement.pois.length === body.poisVisited.length) {
+            const sortedPoiIdsPerAchievement = specificAchievement.pois.map(poi => poi.id).sort();
+            let allPOIsForAchievementVisited = true;
+  
+            for (let index = 0; index < sortedPoiIdsPerAchievement.length; index++) {
+              if (sortedPoiIdsPerAchievement[index] !== body.poisVisited[index]) {
+                allPOIsForAchievementVisited = false;
+                break;
+              }
+            }
+  
+            if (allPOIsForAchievementVisited) {
+              achievementsUnlocked.push(specificAchievement);
             }
           }
+        });
 
-          if (allPOIsForAchievementVisited) {
-            achievementsUnlocked.push(specificAchievement);
+        const allCountAchievements = allAchievements.filter(achv => achv.achievementType === ACHIEVEMENT.Count);
+
+        // check if any count-based achievements were unlocked
+        allCountAchievements.map(countAchievement => {
+          if (body.poisVisited.length >= countAchievement.requiredNumberOfPOIs) {
+            achievementsUnlocked.push(countAchievement);
           }
-        }
-      });
+        });
 
-      const allCountAchievements = allAchievements.filter(achv => achv.achievementType === ACHIEVEMENT.Count);
-
-      allCountAchievements.map(countAchievement => {
-        if (poisVisited.length >= countAchievement.requiredNumberOfPOIs) {
-          achievementsUnlocked.push(countAchievement);
-        }
-      });
-
-      return achievementsUnlocked;
-    }
+        res.status(200).send(achievementsUnlocked);
+      }
 }

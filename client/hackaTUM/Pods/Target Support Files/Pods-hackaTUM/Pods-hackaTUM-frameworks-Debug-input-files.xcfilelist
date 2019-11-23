@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-hackaTUM/Pods-hackaTUM-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ARCoreLocation/ARCoreLocation.framework
 ${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework
 ${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework

@@ -32,7 +32,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="YPQ-iw-ckJ" kind="show" id="dRw-Wu-My5"/>
+                                    <segue destination="EqC-UU-9v7" kind="show" id="9mP-tH-Lbt"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ss8-sg-c5m">
@@ -173,10 +173,20 @@
         <!--Location Detail View Controller-->
         <scene sceneID="4N9-0Z-5wG">
             <objects>
-                <viewController storyboardIdentifier="locationDetail" id="wQH-Iu-oe9" customClass="LocationDetailViewController" customModule="hackaTUM" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController storyboardIdentifier="locationDetail" modalPresentationStyle="fullScreen" id="wQH-Iu-oe9" customClass="LocationDetailViewController" customModule="hackaTUM" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Duw-TU-A15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="472" y="688"/>
+        </scene>
+        <!--ARStoryboard-->
+        <scene sceneID="WmG-QH-DiU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ARStoryboard" id="EqC-UU-9v7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XmM-MU-un0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpf-Ha-Z9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1120" y="1207"/>
         </scene>
     </scenes>
     <resources>

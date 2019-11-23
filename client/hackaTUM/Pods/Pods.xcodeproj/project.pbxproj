@@ -3,49 +3,78 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07641B6C53557956B7F930CE23DD4872 /* Pods-hackaTUM-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B55E75011244C5FA87349C0E387A40E /* Pods-hackaTUM-dummy.m */; };
-		12F7FF6A6F14C8AE3D0E1F08E45C7B42 /* DispatchQueue+XCGAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699686371BA2DC3257E995166636490A /* DispatchQueue+XCGAdditions.swift */; };
-		1425F68BB60EC2EC5D4161B2FCAE375B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A152E37C821F783CFE6EE24A0C02A1C /* Foundation.framework */; };
-		250BADDEC1526005168F487FD47DA7D1 /* XCGLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F8E0C5ABB05774571FCEBE6C3C277 /* XCGLogger-dummy.m */; };
-		26BC80D6B1213AE6DFDA7AB31A19B402 /* DestinationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896AF58BC4D955D678EA98564628392 /* DestinationProtocol.swift */; };
-		2BF6F168040ABD45C3F71B91DF5B62BC /* BaseDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E425249AA903CD0BCFFF65FDE320D7C /* BaseDestination.swift */; };
-		2F456018BC8E4B075C2F672C22DE6C6C /* URL+XCGAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F8544195CED6E429BAE0E26BD471E /* URL+XCGAdditions.swift */; };
-		3317BD4EB4367343F6C4E78E115F6AE2 /* Pods-hackaTUM-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D85C3ED003E80DA4D6E4E7BD6534870 /* Pods-hackaTUM-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		368B178A4595EA67C3B5F18B034282B6 /* XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBFB127258AE8DFDFCE65553124F3C2 /* XCGLogger.swift */; };
-		398B447C4142B7685010E9506BB11058 /* UserInfoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F87646FC2A7193DDD324095026F06 /* UserInfoFilter.swift */; };
-		3C72E4A5F3E4CC8464A61F28EE573048 /* BaseQueuedDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A6D93D7A86A8852AE6402091A78C72 /* BaseQueuedDestination.swift */; };
-		462E85DD35B03BB72D5B5CF26463316C /* ObjectiveCMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC1A25989106DE32A890FA34EC2680 /* ObjectiveCMarker.m */; };
-		471D34B9ECA1E3D7B33B58CAB5FAA560 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A152E37C821F783CFE6EE24A0C02A1C /* Foundation.framework */; };
-		4FD9CF3BC99FBA5A657137FFBD9E4A0E /* ObjcExceptionBridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F5B048E20D436251331E401C53AD56 /* ObjcExceptionBridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		527B2695D90F73882CDF3BEA71B1C22B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A152E37C821F783CFE6EE24A0C02A1C /* Foundation.framework */; };
-		53A1458D1A8FD7D0E68AC9404705CDC7 /* FileNameFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354367530894D96272D493807DD4F32B /* FileNameFilter.swift */; };
-		5C05C31A5A8A8D3D1F455366AB575572 /* LogDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530154853BAFD7CB702700A2E083ED7 /* LogDetails.swift */; };
-		610954B61008305CA5BEA66EC60A4276 /* ObjcExceptionBridging-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E851D2852FCBD2116124952AB49F1E7 /* ObjcExceptionBridging-dummy.m */; };
-		6EF14471695FB895629AF06FDECB5129 /* Base64LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A1CA4F0C7AB02BF7134291CCDC055 /* Base64LogFormatter.swift */; };
-		7B059FA140F4C9AB0D219F71F1E5FC5E /* ObjcExceptionBridging-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 457967106625894D13235E168FACE62C /* ObjcExceptionBridging-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87BCE35CA2919E85F7E8013B47794E5D /* PrePostFixLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5263829C6F84B19327767CEED548D0 /* PrePostFixLogFormatter.swift */; };
-		8F248507EE453A4B37AD7DC2ECC8C95B /* DevFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF190F49F11AD7F8AEA153839974243C /* DevFilter.swift */; };
-		9A51939A391EB6F577835309F1F4295A /* ConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35D7A3C11F151159E2FBA81F19C940 /* ConsoleDestination.swift */; };
-		A37BDE4599AF3DF76A4E13E2EB6DBAE7 /* ANSIColorLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E15160A63DC0D40F5F966ABFE48C08 /* ANSIColorLogFormatter.swift */; };
-		AA97BE8008FA21B56D4FFD5AEE2F25CB /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = 8D54CEDDC5D9B233484A5D586CF2E30C /* .swift-version */; };
-		AC0E8E35A10F2B29539711F8A800D01A /* AutoRotatingFileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDCA791A6B6B8B4468D6B6A6DFAB7B3 /* AutoRotatingFileDestination.swift */; };
-		B767F1B3C86C861F309C2813AE8610A8 /* LogFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDB6C20CBA09493360D12A6A80D431 /* LogFormatterProtocol.swift */; };
-		BA126161DED8F0DF0405BD842DEDA6FA /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D866F0D1B5F59B6E4B094A62C413B3F6 /* HelperFunctions.swift */; };
-		D2B078EA67BD74E714FF1A89822B43D0 /* TestDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8340CC1A43ABFD9F41C3F3076140586 /* TestDestination.swift */; };
-		E37D21D6C3F72FCB41EC9B07B7F7334D /* XCGLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D32AA1D131ADF2A45F3161DE7F0A34 /* XCGLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E584280FC7127CE923CB97EC38BE2AE5 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBCDA4F42BFFFA47E41B2A901598FD3 /* ObjcExceptionBridging.framework */; };
-		E63A707FFE85FDFBBE1B6B5AD90CFF3A /* FilterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C6FA54EBD801AC43FF10EF4A5397A /* FilterProtocol.swift */; };
-		E9C974FC4D6458E7BBCFCFA35A017835 /* XcodeColorsLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C860C81CBB5EEA9FC825BA1BF9F683 /* XcodeColorsLogFormatter.swift */; };
-		EC5E48182602B608FEB475FF20DD4DD8 /* TagFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEA6672AF18D7481FF7EAE70C4B3D06 /* TagFilter.swift */; };
-		F73511BF70FFA054DD9C517081413ADC /* FileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D906D9BE608FFD6C5546E94A262EEF /* FileDestination.swift */; };
-		FCA5FD6D77411D18E9909DFED179752F /* AppleSystemLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11A762FDBA5360C1E6D832969A170C /* AppleSystemLogDestination.swift */; };
+		018D4F6A233D0A86B4DCF1F7AA07C96B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9752B863E1E6BF5CFFEDA236956FD504 /* Foundation.framework */; };
+		12F7FF6A6F14C8AE3D0E1F08E45C7B42 /* DispatchQueue+XCGAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D3ABEF88180790C36C9A3CB8FE2D /* DispatchQueue+XCGAdditions.swift */; };
+		1425F68BB60EC2EC5D4161B2FCAE375B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9752B863E1E6BF5CFFEDA236956FD504 /* Foundation.framework */; };
+		1D54747EA24966C4B92B7D2D5367A501 /* CGRect+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50050482F62C65C3EB702DC64FDE3081 /* CGRect+Ext.swift */; };
+		1DAF461DC05BC25F9A8667C41BBE60B0 /* Pods-hackaTUM-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D85C3ED003E80DA4D6E4E7BD6534870 /* Pods-hackaTUM-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		250BADDEC1526005168F487FD47DA7D1 /* XCGLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA833492B2D8BD80BF5AD6DDA872AB8 /* XCGLogger-dummy.m */; };
+		26BC80D6B1213AE6DFDA7AB31A19B402 /* DestinationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12BA0F62A03A96FD902AE0EA08DC9BA /* DestinationProtocol.swift */; };
+		2BF6F168040ABD45C3F71B91DF5B62BC /* BaseDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B71978B984E60CAA66EA1E4970800 /* BaseDestination.swift */; };
+		2F456018BC8E4B075C2F672C22DE6C6C /* URL+XCGAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CCF3B80D9AE49777BB36DF2F0E03B /* URL+XCGAdditions.swift */; };
+		368B178A4595EA67C3B5F18B034282B6 /* XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2B9B2D52DAECF6826D11F3690AEAB /* XCGLogger.swift */; };
+		398B447C4142B7685010E9506BB11058 /* UserInfoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320096A5C62ADBF53330FA9452BD827 /* UserInfoFilter.swift */; };
+		3BA57633D4F6D33E617B6B3E50D3C5B5 /* OverlappingARLandmarkStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61547FE151CD5EE8FD496D0ECF9806D /* OverlappingARLandmarkStrategy.swift */; };
+		3C72E4A5F3E4CC8464A61F28EE573048 /* BaseQueuedDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E03DC22A6ADDD2CA9F52F9CDDE37F /* BaseQueuedDestination.swift */; };
+		462E85DD35B03BB72D5B5CF26463316C /* ObjectiveCMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCEBCF95C3B636B1D6E2C73F941D8DB /* ObjectiveCMarker.m */; };
+		471D34B9ECA1E3D7B33B58CAB5FAA560 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9752B863E1E6BF5CFFEDA236956FD504 /* Foundation.framework */; };
+		49963B6C6F8576D7BFD844E8242E834E /* Pods-hackaTUM-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B55E75011244C5FA87349C0E387A40E /* Pods-hackaTUM-dummy.m */; };
+		4FD9CF3BC99FBA5A657137FFBD9E4A0E /* ObjcExceptionBridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 213C4FF10D2B1A3872C6A44FAD676E6A /* ObjcExceptionBridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53A1458D1A8FD7D0E68AC9404705CDC7 /* FileNameFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7EFBC54CAB1827CF83946D87C10D91 /* FileNameFilter.swift */; };
+		5C05C31A5A8A8D3D1F455366AB575572 /* LogDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17144891DB8F63F4974997AE938D3C93 /* LogDetails.swift */; };
+		60BA647F4AE0E1D2A3E3F8B4AF8FAAA9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6712668B4BBDF4A08E55B6FC621999B2 /* CoreLocation.framework */; };
+		610954B61008305CA5BEA66EC60A4276 /* ObjcExceptionBridging-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B31C66E25E4E0BE3CB5FD2E7EF957 /* ObjcExceptionBridging-dummy.m */; };
+		65FC949DFB0DF8F771F389D11B8C866C /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D6A99B25195E8C33C494BBF1ADA42 /* UIView+Ext.swift */; };
+		6C9B9B02FA6562E0C7426DD101DC632D /* ARCoreLocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B7B53159EE3A212EC5702AC01C4C6 /* ARCoreLocation-dummy.m */; };
+		6EF14471695FB895629AF06FDECB5129 /* Base64LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF00A4F472F40057E52019DAA92E9CC /* Base64LogFormatter.swift */; };
+		7B059FA140F4C9AB0D219F71F1E5FC5E /* ObjcExceptionBridging-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998CBB66FF678CF1EE726279ED4E0B5 /* ObjcExceptionBridging-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87BCE35CA2919E85F7E8013B47794E5D /* PrePostFixLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EB52F2D52966F30D130BBD62BC37A /* PrePostFixLogFormatter.swift */; };
+		8F248507EE453A4B37AD7DC2ECC8C95B /* DevFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD28980D660703013EB1AA382E9AAB3 /* DevFilter.swift */; };
+		967E350D8D13E846AC5B82ED085D72A6 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB6606D3D7F2A26264AAB8C0052411E /* GLKit.framework */; };
+		9A51939A391EB6F577835309F1F4295A /* ConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE471AC838B534D96B16A03903D3CE /* ConsoleDestination.swift */; };
+		A37BDE4599AF3DF76A4E13E2EB6DBAE7 /* ANSIColorLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3DFDEA9B0B0D6C0DCBF44B7DDBD95 /* ANSIColorLogFormatter.swift */; };
+		AA97BE8008FA21B56D4FFD5AEE2F25CB /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = 539CE950735C8E24A18EFB02DF7EFBD5 /* .swift-version */; };
+		AC0E8E35A10F2B29539711F8A800D01A /* AutoRotatingFileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D82ADA77B72C96A5B48F4E6264F51A /* AutoRotatingFileDestination.swift */; };
+		AECC8DECF371BD7B25958E22A5B39B74 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C9BF822FDFF8B6C8AAC4099AF1082 /* Matrix.swift */; };
+		B2538EDB2DBBFC5A2DCFAC492FFBCC3D /* ARCoreLocation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 065A6CB53138A5AFE8FD62D3686F88E1 /* ARCoreLocation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B767F1B3C86C861F309C2813AE8610A8 /* LogFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D289F02C0537DAB902034A91686BE0A /* LogFormatterProtocol.swift */; };
+		B86D4D8554569006EF74038019633A93 /* SetMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7724212325A8C410EC9FD331B2B72 /* SetMerger.swift */; };
+		BA126161DED8F0DF0405BD842DEDA6FA /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB061A767C15B6D8777D8BA2D2FAFCB /* HelperFunctions.swift */; };
+		BED0DB4E5E0C32629C7A60940F86387A /* InteractiveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FB9C48D74E9469AECEEE7E54F9175 /* InteractiveScene.swift */; };
+		C411266407C8A0C809355C6278A87638 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B65A010592577C5CEA6D5A2A51D4982 /* ARKit.framework */; };
+		CEE8427BE825AC6E6E22E1C91432AE82 /* ARLandmarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FFA05C59EA2BA68EB0A51537DC0B5C /* ARLandmarker.swift */; };
+		D2B078EA67BD74E714FF1A89822B43D0 /* TestDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61D5DC3C5E6D6B1A62538EB9980B579 /* TestDestination.swift */; };
+		D405EF1F54661DC4076E147E86C4B219 /* ARLandmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854812487691F77D9C2C96EE46FF82F /* ARLandmark.swift */; };
+		DA15C1C4137D666467911E6DD9DBF78C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9752B863E1E6BF5CFFEDA236956FD504 /* Foundation.framework */; };
+		E37D21D6C3F72FCB41EC9B07B7F7334D /* XCGLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE3DA41EB6C4D981E6008CB47CB0E3A1 /* XCGLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E584280FC7127CE923CB97EC38BE2AE5 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1AAEEA2C979679411C3D9FAFCD1BA3 /* ObjcExceptionBridging.framework */; };
+		E63A707FFE85FDFBBE1B6B5AD90CFF3A /* FilterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2719A570669948C052ED87876998B56 /* FilterProtocol.swift */; };
+		E9C974FC4D6458E7BBCFCFA35A017835 /* XcodeColorsLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0FE1A7957D7ABFB60DB3FBDE873C41 /* XcodeColorsLogFormatter.swift */; };
+		EC5E48182602B608FEB475FF20DD4DD8 /* TagFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17019616754C3A0A666758DB2239779 /* TagFilter.swift */; };
+		F73511BF70FFA054DD9C517081413ADC /* FileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BADA29227821F1102DE8D301B65319 /* FileDestination.swift */; };
+		F9B8E5EA4D0CF5A64ECF7DF07A4962BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8DC9BEFAC201AD5587081F0CFE2065 /* UIKit.framework */; };
+		FCA5FD6D77411D18E9909DFED179752F /* AppleSystemLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2625881DE7DFF7960A01C8BEE25E83 /* AppleSystemLogDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		17DBD5562B0A62DDC88292298C7E7BE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3A6763C07901EF7A15F730C26485FB7;
+			remoteInfo = ARCoreLocation;
+		};
+		38D717B3C30BD5B30D33AD35B50E6448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07AFE6B9C0D64C3222F1B3FAA995664C;
+			remoteInfo = XCGLogger;
+		};
 		5A3BEBFE31C36297DC598F3E1611E102 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -53,14 +82,7 @@
 			remoteGlobalIDString = 746615E9A06AABA6F288B49A10B63E10;
 			remoteInfo = ObjcExceptionBridging;
 		};
-		83E5ABAEA28B19D47CD535985B6FD2C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 07AFE6B9C0D64C3222F1B3FAA995664C;
-			remoteInfo = XCGLogger;
-		};
-		DD9C886FCDDD375776E49B2F74F3322A /* PBXContainerItemProxy */ = {
+		8005E90023D454878B32E9FCB28A702D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -70,59 +92,78 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008E91B36CFC3C392D04D68F20A50423 /* XCGLogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XCGLogger-Info.plist"; sourceTree = "<group>"; };
-		078297D4E3D46EEC91C038159D1F7BD2 /* ObjcExceptionBridging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjcExceptionBridging.xcconfig; sourceTree = "<group>"; };
-		0896AF58BC4D955D678EA98564628392 /* DestinationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DestinationProtocol.swift; path = Sources/XCGLogger/Destinations/DestinationProtocol.swift; sourceTree = "<group>"; };
-		0A152E37C821F783CFE6EE24A0C02A1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		0BDCA791A6B6B8B4468D6B6A6DFAB7B3 /* AutoRotatingFileDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoRotatingFileDestination.swift; path = Sources/XCGLogger/Destinations/AutoRotatingFileDestination.swift; sourceTree = "<group>"; };
+		02F2B9B2D52DAECF6826D11F3690AEAB /* XCGLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XCGLogger.swift; path = Sources/XCGLogger/XCGLogger.swift; sourceTree = "<group>"; };
+		065A6CB53138A5AFE8FD62D3686F88E1 /* ARCoreLocation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARCoreLocation-umbrella.h"; sourceTree = "<group>"; };
+		0998CBB66FF678CF1EE726279ED4E0B5 /* ObjcExceptionBridging-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjcExceptionBridging-umbrella.h"; sourceTree = "<group>"; };
 		0D85C3ED003E80DA4D6E4E7BD6534870 /* Pods-hackaTUM-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hackaTUM-umbrella.h"; sourceTree = "<group>"; };
-		1B4BAF0AC981A6003EA449ABDA38C8EF /* XCGLogger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XCGLogger.xcconfig; sourceTree = "<group>"; };
+		14D82ADA77B72C96A5B48F4E6264F51A /* AutoRotatingFileDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoRotatingFileDestination.swift; path = Sources/XCGLogger/Destinations/AutoRotatingFileDestination.swift; sourceTree = "<group>"; };
+		17144891DB8F63F4974997AE938D3C93 /* LogDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogDetails.swift; path = Sources/XCGLogger/Misc/LogDetails.swift; sourceTree = "<group>"; };
 		1CAB16A12A28E8BE749202B03552307A /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjcExceptionBridging.framework; path = ObjcExceptionBridging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F35D7A3C11F151159E2FBA81F19C940 /* ConsoleDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConsoleDestination.swift; path = Sources/XCGLogger/Destinations/ConsoleDestination.swift; sourceTree = "<group>"; };
-		1F3F87646FC2A7193DDD324095026F06 /* UserInfoFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInfoFilter.swift; path = Sources/XCGLogger/Filters/UserInfoFilter.swift; sourceTree = "<group>"; };
-		23AC1A25989106DE32A890FA34EC2680 /* ObjectiveCMarker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjectiveCMarker.m; path = Sources/ObjcExceptionBridging/ObjectiveCMarker.m; sourceTree = "<group>"; };
-		23E54FF4538321E41AE20572C6864745 /* XCGLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-prefix.pch"; sourceTree = "<group>"; };
-		28A6D93D7A86A8852AE6402091A78C72 /* BaseQueuedDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseQueuedDestination.swift; path = Sources/XCGLogger/Destinations/BaseQueuedDestination.swift; sourceTree = "<group>"; };
-		354367530894D96272D493807DD4F32B /* FileNameFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileNameFilter.swift; path = Sources/XCGLogger/Filters/FileNameFilter.swift; sourceTree = "<group>"; };
+		1CC6A0F9A305044BE33FE28AC15D3994 /* ARCoreLocation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARCoreLocation-prefix.pch"; sourceTree = "<group>"; };
+		1CCEBCF95C3B636B1D6E2C73F941D8DB /* ObjectiveCMarker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjectiveCMarker.m; path = Sources/ObjcExceptionBridging/ObjectiveCMarker.m; sourceTree = "<group>"; };
+		1EEADA3020D0EEA81BD6D77F842C3E78 /* ARCoreLocation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARCoreLocation.xcconfig; sourceTree = "<group>"; };
+		213C4FF10D2B1A3872C6A44FAD676E6A /* ObjcExceptionBridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionBridging.h; path = Sources/ObjcExceptionBridging/include/ObjcExceptionBridging.h; sourceTree = "<group>"; };
+		263B10D1B5461368096463338DD151B3 /* XCGLogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XCGLogger-Info.plist"; sourceTree = "<group>"; };
+		2FD28980D660703013EB1AA382E9AAB3 /* DevFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DevFilter.swift; path = Sources/XCGLogger/Filters/DevFilter.swift; sourceTree = "<group>"; };
+		341C1B557881B507FFC8D530BE7D2ECD /* ObjcExceptionBridging-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ObjcExceptionBridging-Info.plist"; sourceTree = "<group>"; };
+		347C192735C6D6A689005D6C4E04F48B /* ObjcExceptionBridging-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjcExceptionBridging-prefix.pch"; sourceTree = "<group>"; };
+		3AF00A4F472F40057E52019DAA92E9CC /* Base64LogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base64LogFormatter.swift; path = Sources/XCGLogger/LogFormatters/Base64LogFormatter.swift; sourceTree = "<group>"; };
 		3AF5CA2AC34F1B591EF4EF5D82BFBE61 /* Pods-hackaTUM.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-hackaTUM.modulemap"; sourceTree = "<group>"; };
-		44A6FAE7A8C31DEC4B118A1B04F05AFC /* ObjcExceptionBridging.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ObjcExceptionBridging.modulemap; sourceTree = "<group>"; };
-		457967106625894D13235E168FACE62C /* ObjcExceptionBridging-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjcExceptionBridging-umbrella.h"; sourceTree = "<group>"; };
+		3EB061A767C15B6D8777D8BA2D2FAFCB /* HelperFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HelperFunctions.swift; path = Sources/XCGLogger/Misc/HelperFunctions.swift; sourceTree = "<group>"; };
+		458986850777B878D7E1F956EA6028A6 /* XCGLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-prefix.pch"; sourceTree = "<group>"; };
 		470B999BF2E2A3767BAC157A588E993A /* Pods-hackaTUM-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackaTUM-acknowledgements.plist"; sourceTree = "<group>"; };
+		47F9D3ABEF88180790C36C9A3CB8FE2D /* DispatchQueue+XCGAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+XCGAdditions.swift"; path = "Sources/XCGLogger/Extensions/DispatchQueue+XCGAdditions.swift"; sourceTree = "<group>"; };
 		4B55E75011244C5FA87349C0E387A40E /* Pods-hackaTUM-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hackaTUM-dummy.m"; sourceTree = "<group>"; };
-		4C11A762FDBA5360C1E6D832969A170C /* AppleSystemLogDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleSystemLogDestination.swift; path = Sources/XCGLogger/Destinations/AppleSystemLogDestination.swift; sourceTree = "<group>"; };
-		5E851D2852FCBD2116124952AB49F1E7 /* ObjcExceptionBridging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjcExceptionBridging-dummy.m"; sourceTree = "<group>"; };
-		699686371BA2DC3257E995166636490A /* DispatchQueue+XCGAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+XCGAdditions.swift"; path = "Sources/XCGLogger/Extensions/DispatchQueue+XCGAdditions.swift"; sourceTree = "<group>"; };
-		6B5263829C6F84B19327767CEED548D0 /* PrePostFixLogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrePostFixLogFormatter.swift; path = Sources/XCGLogger/LogFormatters/PrePostFixLogFormatter.swift; sourceTree = "<group>"; };
-		6EBCDA4F42BFFFA47E41B2A901598FD3 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjcExceptionBridging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7530154853BAFD7CB702700A2E083ED7 /* LogDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogDetails.swift; path = Sources/XCGLogger/Misc/LogDetails.swift; sourceTree = "<group>"; };
-		79F5B048E20D436251331E401C53AD56 /* ObjcExceptionBridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionBridging.h; path = Sources/ObjcExceptionBridging/include/ObjcExceptionBridging.h; sourceTree = "<group>"; };
-		79FDB6C20CBA09493360D12A6A80D431 /* LogFormatterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogFormatterProtocol.swift; path = Sources/XCGLogger/LogFormatters/LogFormatterProtocol.swift; sourceTree = "<group>"; };
+		50050482F62C65C3EB702DC64FDE3081 /* CGRect+Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Ext.swift"; path = "ARCoreLocation/Extensions/CGRect+Ext.swift"; sourceTree = "<group>"; };
+		539CE950735C8E24A18EFB02DF7EFBD5 /* .swift-version */ = {isa = PBXFileReference; includeInIndex = 1; path = ".swift-version"; sourceTree = "<group>"; };
+		5B65A010592577C5CEA6D5A2A51D4982 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/ARKit.framework; sourceTree = DEVELOPER_DIR; };
+		6712668B4BBDF4A08E55B6FC621999B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		6A3B71978B984E60CAA66EA1E4970800 /* BaseDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseDestination.swift; path = Sources/XCGLogger/Destinations/BaseDestination.swift; sourceTree = "<group>"; };
+		6B1B27A6DEEE85755122492ACB38EC18 /* ARCoreLocation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ARCoreLocation.modulemap; sourceTree = "<group>"; };
+		6B7EFBC54CAB1827CF83946D87C10D91 /* FileNameFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileNameFilter.swift; path = Sources/XCGLogger/Filters/FileNameFilter.swift; sourceTree = "<group>"; };
+		6E8DC9BEFAC201AD5587081F0CFE2065 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		75E3E49014B0ECE40EFF4D171D902244 /* XCGLogger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XCGLogger.xcconfig; sourceTree = "<group>"; };
 		7B757EAAD720ADA742FAEC5724CD03DC /* Pods-hackaTUM-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hackaTUM-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7E425249AA903CD0BCFFF65FDE320D7C /* BaseDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseDestination.swift; path = Sources/XCGLogger/Destinations/BaseDestination.swift; sourceTree = "<group>"; };
-		887F8E0C5ABB05774571FCEBE6C3C277 /* XCGLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCGLogger-dummy.m"; sourceTree = "<group>"; };
-		8D54CEDDC5D9B233484A5D586CF2E30C /* .swift-version */ = {isa = PBXFileReference; includeInIndex = 1; path = ".swift-version"; sourceTree = "<group>"; };
-		93D906D9BE608FFD6C5546E94A262EEF /* FileDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileDestination.swift; path = Sources/XCGLogger/Destinations/FileDestination.swift; sourceTree = "<group>"; };
+		7D289F02C0537DAB902034A91686BE0A /* LogFormatterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogFormatterProtocol.swift; path = Sources/XCGLogger/LogFormatters/LogFormatterProtocol.swift; sourceTree = "<group>"; };
+		7E8B31C66E25E4E0BE3CB5FD2E7EF957 /* ObjcExceptionBridging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjcExceptionBridging-dummy.m"; sourceTree = "<group>"; };
+		7FB6606D3D7F2A26264AAB8C0052411E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A8FB9C48D74E9469AECEEE7E54F9175 /* InteractiveScene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveScene.swift; path = ARCoreLocation/InteractiveScene.swift; sourceTree = "<group>"; };
+		9752B863E1E6BF5CFFEDA236956FD504 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9949F8EBF512415480CF5A2E36F577DE /* ARCoreLocation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ARCoreLocation-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A080C6DDDA9E016FA5B4FA60DC93BE14 /* Pods-hackaTUM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackaTUM.release.xcconfig"; sourceTree = "<group>"; };
-		C0C860C81CBB5EEA9FC825BA1BF9F683 /* XcodeColorsLogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XcodeColorsLogFormatter.swift; path = Sources/XCGLogger/LogFormatters/XcodeColorsLogFormatter.swift; sourceTree = "<group>"; };
-		C5578D79D66EE50864E2E4676CEA9697 /* ObjcExceptionBridging-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjcExceptionBridging-prefix.pch"; sourceTree = "<group>"; };
-		CB7A1CA4F0C7AB02BF7134291CCDC055 /* Base64LogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base64LogFormatter.swift; path = Sources/XCGLogger/LogFormatters/Base64LogFormatter.swift; sourceTree = "<group>"; };
-		CBEA6672AF18D7481FF7EAE70C4B3D06 /* TagFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagFilter.swift; path = Sources/XCGLogger/Filters/TagFilter.swift; sourceTree = "<group>"; };
-		D866F0D1B5F59B6E4B094A62C413B3F6 /* HelperFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HelperFunctions.swift; path = Sources/XCGLogger/Misc/HelperFunctions.swift; sourceTree = "<group>"; };
+		AA3EB52F2D52966F30D130BBD62BC37A /* PrePostFixLogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrePostFixLogFormatter.swift; path = Sources/XCGLogger/LogFormatters/PrePostFixLogFormatter.swift; sourceTree = "<group>"; };
+		B17019616754C3A0A666758DB2239779 /* TagFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagFilter.swift; path = Sources/XCGLogger/Filters/TagFilter.swift; sourceTree = "<group>"; };
+		B2719A570669948C052ED87876998B56 /* FilterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilterProtocol.swift; path = Sources/XCGLogger/Filters/FilterProtocol.swift; sourceTree = "<group>"; };
+		B4E7724212325A8C410EC9FD331B2B72 /* SetMerger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetMerger.swift; path = ARCoreLocation/Utility/SetMerger.swift; sourceTree = "<group>"; };
+		BC1AAEEA2C979679411C3D9FAFCD1BA3 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjcExceptionBridging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2625881DE7DFF7960A01C8BEE25E83 /* AppleSystemLogDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleSystemLogDestination.swift; path = Sources/XCGLogger/Destinations/AppleSystemLogDestination.swift; sourceTree = "<group>"; };
+		BC80CC33607CB45FD01F2D0403886415 /* ARCoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ARCoreLocation.framework; path = ARCoreLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3DA41EB6C4D981E6008CB47CB0E3A1 /* XCGLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-umbrella.h"; sourceTree = "<group>"; };
+		C12BA0F62A03A96FD902AE0EA08DC9BA /* DestinationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DestinationProtocol.swift; path = Sources/XCGLogger/Destinations/DestinationProtocol.swift; sourceTree = "<group>"; };
+		C61D5DC3C5E6D6B1A62538EB9980B579 /* TestDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestDestination.swift; path = Sources/XCGLogger/Destinations/TestDestination.swift; sourceTree = "<group>"; };
+		CB3CCF3B80D9AE49777BB36DF2F0E03B /* URL+XCGAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+XCGAdditions.swift"; path = "Sources/XCGLogger/Extensions/URL+XCGAdditions.swift"; sourceTree = "<group>"; };
+		D320096A5C62ADBF53330FA9452BD827 /* UserInfoFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInfoFilter.swift; path = Sources/XCGLogger/Filters/UserInfoFilter.swift; sourceTree = "<group>"; };
+		D3F3DFDEA9B0B0D6C0DCBF44B7DDBD95 /* ANSIColorLogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ANSIColorLogFormatter.swift; path = Sources/XCGLogger/LogFormatters/ANSIColorLogFormatter.swift; sourceTree = "<group>"; };
+		D4BADA29227821F1102DE8D301B65319 /* FileDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileDestination.swift; path = Sources/XCGLogger/Destinations/FileDestination.swift; sourceTree = "<group>"; };
+		D61547FE151CD5EE8FD496D0ECF9806D /* OverlappingARLandmarkStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlappingARLandmarkStrategy.swift; path = ARCoreLocation/OverlappingARLandmarkStrategy.swift; sourceTree = "<group>"; };
+		D854812487691F77D9C2C96EE46FF82F /* ARLandmark.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARLandmark.swift; path = ARCoreLocation/ARLandmark.swift; sourceTree = "<group>"; };
 		DB1929723AAF3DAA8FBB8E0297198BEF /* Pods-hackaTUM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackaTUM.debug.xcconfig"; sourceTree = "<group>"; };
 		DEBBB4152709BE0B083DC8FDE7F62A5C /* Pods-hackaTUM-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackaTUM-Info.plist"; sourceTree = "<group>"; };
-		E06C6FA54EBD801AC43FF10EF4A5397A /* FilterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilterProtocol.swift; path = Sources/XCGLogger/Filters/FilterProtocol.swift; sourceTree = "<group>"; };
-		E37F8544195CED6E429BAE0E26BD471E /* URL+XCGAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+XCGAdditions.swift"; path = "Sources/XCGLogger/Extensions/URL+XCGAdditions.swift"; sourceTree = "<group>"; };
+		E2FFA05C59EA2BA68EB0A51537DC0B5C /* ARLandmarker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARLandmarker.swift; path = ARCoreLocation/ARLandmarker.swift; sourceTree = "<group>"; };
+		E330967920AEED69CD2368EE4E3DA860 /* ObjcExceptionBridging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjcExceptionBridging.xcconfig; sourceTree = "<group>"; };
+		E5CF8675C26C4ADF019AF16FC67A088E /* XCGLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XCGLogger.modulemap; sourceTree = "<group>"; };
+		E73B7B53159EE3A212EC5702AC01C4C6 /* ARCoreLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARCoreLocation-dummy.m"; sourceTree = "<group>"; };
+		E79C9BF822FDFF8B6C8AAC4099AF1082 /* Matrix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matrix.swift; path = ARCoreLocation/Utility/Matrix.swift; sourceTree = "<group>"; };
+		E8161532B1756968C6FC7C91BE132AF5 /* ObjcExceptionBridging.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ObjcExceptionBridging.modulemap; sourceTree = "<group>"; };
+		E95D6A99B25195E8C33C494BBF1ADA42 /* UIView+Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Ext.swift"; path = "ARCoreLocation/Extensions/UIView+Ext.swift"; sourceTree = "<group>"; };
+		EBA833492B2D8BD80BF5AD6DDA872AB8 /* XCGLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCGLogger-dummy.m"; sourceTree = "<group>"; };
 		ECC518591D8A8708F241F9D6735A733C /* Pods-hackaTUM-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hackaTUM-frameworks.sh"; sourceTree = "<group>"; };
-		EF190F49F11AD7F8AEA153839974243C /* DevFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DevFilter.swift; path = Sources/XCGLogger/Filters/DevFilter.swift; sourceTree = "<group>"; };
-		EFBFB127258AE8DFDFCE65553124F3C2 /* XCGLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XCGLogger.swift; path = Sources/XCGLogger/XCGLogger.swift; sourceTree = "<group>"; };
-		F1D32AA1D131ADF2A45F3161DE7F0A34 /* XCGLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-umbrella.h"; sourceTree = "<group>"; };
-		F5E15160A63DC0D40F5F966ABFE48C08 /* ANSIColorLogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ANSIColorLogFormatter.swift; path = Sources/XCGLogger/LogFormatters/ANSIColorLogFormatter.swift; sourceTree = "<group>"; };
-		F8340CC1A43ABFD9F41C3F3076140586 /* TestDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestDestination.swift; path = Sources/XCGLogger/Destinations/TestDestination.swift; sourceTree = "<group>"; };
+		F34E03DC22A6ADDD2CA9F52F9CDDE37F /* BaseQueuedDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseQueuedDestination.swift; path = Sources/XCGLogger/Destinations/BaseQueuedDestination.swift; sourceTree = "<group>"; };
 		F98A28668345E054F96821F2D01503B1 /* Pods_hackaTUM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_hackaTUM.framework; path = "Pods-hackaTUM.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBB987EF04899173BE3917DEB0A079B7 /* ObjcExceptionBridging-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ObjcExceptionBridging-Info.plist"; sourceTree = "<group>"; };
-		FC1D0616B6FB1D8B3969C707D83EB1E7 /* XCGLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XCGLogger.modulemap; sourceTree = "<group>"; };
 		FC21E11599264BC8297EB97354A9423F /* XCGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XCGLogger.framework; path = XCGLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0FE1A7957D7ABFB60DB3FBDE873C41 /* XcodeColorsLogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XcodeColorsLogFormatter.swift; path = Sources/XCGLogger/LogFormatters/XcodeColorsLogFormatter.swift; sourceTree = "<group>"; };
+		FDBE471AC838B534D96B16A03903D3CE /* ConsoleDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConsoleDestination.swift; path = Sources/XCGLogger/Destinations/ConsoleDestination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +172,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1425F68BB60EC2EC5D4161B2FCAE375B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A1106AF2C086B09DF3C2D40718FB0FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C411266407C8A0C809355C6278A87638 /* ARKit.framework in Frameworks */,
+				60BA647F4AE0E1D2A3E3F8B4AF8FAAA9 /* CoreLocation.framework in Frameworks */,
+				018D4F6A233D0A86B4DCF1F7AA07C96B /* Foundation.framework in Frameworks */,
+				967E350D8D13E846AC5B82ED085D72A6 /* GLKit.framework in Frameworks */,
+				F9B8E5EA4D0CF5A64ECF7DF07A4962BB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,23 +196,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBEBDBFE9C9B3B58BE864100F4B44757 /* Frameworks */ = {
+		DFF48BEEDEF26A92566A88F3D5DAD731 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527B2695D90F73882CDF3BEA71B1C22B /* Foundation.framework in Frameworks */,
+				DA15C1C4137D666467911E6DD9DBF78C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		077D4732E7E2C297E7BA5F47602E02D6 /* Resources */ = {
+		0369EB484E551DA249D5BE89B805279E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8D54CEDDC5D9B233484A5D586CF2E30C /* .swift-version */,
+				E5CF8675C26C4ADF019AF16FC67A088E /* XCGLogger.modulemap */,
+				75E3E49014B0ECE40EFF4D171D902244 /* XCGLogger.xcconfig */,
+				EBA833492B2D8BD80BF5AD6DDA872AB8 /* XCGLogger-dummy.m */,
+				263B10D1B5461368096463338DD151B3 /* XCGLogger-Info.plist */,
+				458986850777B878D7E1F956EA6028A6 /* XCGLogger-prefix.pch */,
+				BE3DA41EB6C4D981E6008CB47CB0E3A1 /* XCGLogger-umbrella.h */,
 			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/XCGLogger";
+			sourceTree = "<group>";
+		};
+		100CFAFD2B6565494A629450C3484E4C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3DFDEA9B0B0D6C0DCBF44B7DDBD95 /* ANSIColorLogFormatter.swift */,
+				BC2625881DE7DFF7960A01C8BEE25E83 /* AppleSystemLogDestination.swift */,
+				14D82ADA77B72C96A5B48F4E6264F51A /* AutoRotatingFileDestination.swift */,
+				3AF00A4F472F40057E52019DAA92E9CC /* Base64LogFormatter.swift */,
+				6A3B71978B984E60CAA66EA1E4970800 /* BaseDestination.swift */,
+				F34E03DC22A6ADDD2CA9F52F9CDDE37F /* BaseQueuedDestination.swift */,
+				FDBE471AC838B534D96B16A03903D3CE /* ConsoleDestination.swift */,
+				C12BA0F62A03A96FD902AE0EA08DC9BA /* DestinationProtocol.swift */,
+				2FD28980D660703013EB1AA382E9AAB3 /* DevFilter.swift */,
+				47F9D3ABEF88180790C36C9A3CB8FE2D /* DispatchQueue+XCGAdditions.swift */,
+				D4BADA29227821F1102DE8D301B65319 /* FileDestination.swift */,
+				6B7EFBC54CAB1827CF83946D87C10D91 /* FileNameFilter.swift */,
+				B2719A570669948C052ED87876998B56 /* FilterProtocol.swift */,
+				3EB061A767C15B6D8777D8BA2D2FAFCB /* HelperFunctions.swift */,
+				17144891DB8F63F4974997AE938D3C93 /* LogDetails.swift */,
+				7D289F02C0537DAB902034A91686BE0A /* LogFormatterProtocol.swift */,
+				AA3EB52F2D52966F30D130BBD62BC37A /* PrePostFixLogFormatter.swift */,
+				B17019616754C3A0A666758DB2239779 /* TagFilter.swift */,
+				C61D5DC3C5E6D6B1A62538EB9980B579 /* TestDestination.swift */,
+				CB3CCF3B80D9AE49777BB36DF2F0E03B /* URL+XCGAdditions.swift */,
+				D320096A5C62ADBF53330FA9452BD827 /* UserInfoFilter.swift */,
+				02F2B9B2D52DAECF6826D11F3690AEAB /* XCGLogger.swift */,
+				FD0FE1A7957D7ABFB60DB3FBDE873C41 /* XcodeColorsLogFormatter.swift */,
+				C9FF49DB1D233729B3EE7E486A3C6482 /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		128BDDF7C3EA41380752CC1A75792F40 /* ObjcExceptionBridging */ = {
+			isa = PBXGroup;
+			children = (
+				F727F552702112671810E44404E3A164 /* ObjcExceptionBridging */,
+				43DBB9EF77F1753F06D6033149C91A2E /* Support Files */,
+			);
+			name = ObjcExceptionBridging;
+			path = ObjcExceptionBridging;
 			sourceTree = "<group>";
 		};
 		1E6F0B953E2B098A8A5B600C79755C05 /* Targets Support Files */ = {
@@ -170,24 +270,49 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		31D9CB91C4E0A6E81C65E9E05A05596B /* Products */ = {
+		24F8F03F9A649E93AC8B67C7AAE8B994 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1CAB16A12A28E8BE749202B03552307A /* ObjcExceptionBridging.framework */,
-				F98A28668345E054F96821F2D01503B1 /* Pods_hackaTUM.framework */,
-				FC21E11599264BC8297EB97354A9423F /* XCGLogger.framework */,
+				6B1B27A6DEEE85755122492ACB38EC18 /* ARCoreLocation.modulemap */,
+				1EEADA3020D0EEA81BD6D77F842C3E78 /* ARCoreLocation.xcconfig */,
+				E73B7B53159EE3A212EC5702AC01C4C6 /* ARCoreLocation-dummy.m */,
+				9949F8EBF512415480CF5A2E36F577DE /* ARCoreLocation-Info.plist */,
+				1CC6A0F9A305044BE33FE28AC15D3994 /* ARCoreLocation-prefix.pch */,
+				065A6CB53138A5AFE8FD62D3686F88E1 /* ARCoreLocation-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/ARCoreLocation";
 			sourceTree = "<group>";
 		};
-		47D6FBBAA8188E75AEA5688DA425C97E /* XCGLogger */ = {
+		268AB5E636745E88C889EE69F5728A0F /* ARCoreLocation */ = {
 			isa = PBXGroup;
 			children = (
-				95D07A298F6014ABE4953AFBDB6C5F46 /* Core */,
-				F4A9AEFD731C4BD4C2944196EF63A984 /* Support Files */,
+				D854812487691F77D9C2C96EE46FF82F /* ARLandmark.swift */,
+				E2FFA05C59EA2BA68EB0A51537DC0B5C /* ARLandmarker.swift */,
+				50050482F62C65C3EB702DC64FDE3081 /* CGRect+Ext.swift */,
+				8A8FB9C48D74E9469AECEEE7E54F9175 /* InteractiveScene.swift */,
+				E79C9BF822FDFF8B6C8AAC4099AF1082 /* Matrix.swift */,
+				D61547FE151CD5EE8FD496D0ECF9806D /* OverlappingARLandmarkStrategy.swift */,
+				B4E7724212325A8C410EC9FD331B2B72 /* SetMerger.swift */,
+				E95D6A99B25195E8C33C494BBF1ADA42 /* UIView+Ext.swift */,
+				24F8F03F9A649E93AC8B67C7AAE8B994 /* Support Files */,
 			);
-			name = XCGLogger;
-			path = XCGLogger;
+			name = ARCoreLocation;
+			path = ARCoreLocation;
+			sourceTree = "<group>";
+		};
+		43DBB9EF77F1753F06D6033149C91A2E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8161532B1756968C6FC7C91BE132AF5 /* ObjcExceptionBridging.modulemap */,
+				E330967920AEED69CD2368EE4E3DA860 /* ObjcExceptionBridging.xcconfig */,
+				7E8B31C66E25E4E0BE3CB5FD2E7EF957 /* ObjcExceptionBridging-dummy.m */,
+				341C1B557881B507FFC8D530BE7D2ECD /* ObjcExceptionBridging-Info.plist */,
+				347C192735C6D6A689005D6C4E04F48B /* ObjcExceptionBridging-prefix.pch */,
+				0998CBB66FF678CF1EE726279ED4E0B5 /* ObjcExceptionBridging-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ObjcExceptionBridging";
 			sourceTree = "<group>";
 		};
 		550E0DDBD756B2E2D49FCB110944E57F /* Pods-hackaTUM */ = {
@@ -207,119 +332,84 @@
 			path = "Target Support Files/Pods-hackaTUM";
 			sourceTree = "<group>";
 		};
-		5B886A1FDF6D262EF9166AE418B67E29 /* ObjcExceptionBridging */ = {
+		81A615273A49372C4BD2B45016177BB0 /* XCGLogger */ = {
 			isa = PBXGroup;
 			children = (
-				79F5B048E20D436251331E401C53AD56 /* ObjcExceptionBridging.h */,
-				23AC1A25989106DE32A890FA34EC2680 /* ObjectiveCMarker.m */,
+				100CFAFD2B6565494A629450C3484E4C /* Core */,
+				0369EB484E551DA249D5BE89B805279E /* Support Files */,
 			);
-			name = ObjcExceptionBridging;
+			name = XCGLogger;
+			path = XCGLogger;
 			sourceTree = "<group>";
 		};
-		71B1CCC8591067075F9135B3F730B2A1 /* Pods */ = {
+		A51668364117FD67E57990066438E0AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D26BB34B3A0A59586098FE9CEFE1555B /* ObjcExceptionBridging */,
-				47D6FBBAA8188E75AEA5688DA425C97E /* XCGLogger */,
+				BC1AAEEA2C979679411C3D9FAFCD1BA3 /* ObjcExceptionBridging.framework */,
+				E26DCE40B2943F45C863F70C477902F7 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD9E647EEA7C0FC8147BFF112AE2A5DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				268AB5E636745E88C889EE69F5728A0F /* ARCoreLocation */,
+				128BDDF7C3EA41380752CC1A75792F40 /* ObjcExceptionBridging */,
+				81A615273A49372C4BD2B45016177BB0 /* XCGLogger */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		95D07A298F6014ABE4953AFBDB6C5F46 /* Core */ = {
+		C9FF49DB1D233729B3EE7E486A3C6482 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F5E15160A63DC0D40F5F966ABFE48C08 /* ANSIColorLogFormatter.swift */,
-				4C11A762FDBA5360C1E6D832969A170C /* AppleSystemLogDestination.swift */,
-				0BDCA791A6B6B8B4468D6B6A6DFAB7B3 /* AutoRotatingFileDestination.swift */,
-				CB7A1CA4F0C7AB02BF7134291CCDC055 /* Base64LogFormatter.swift */,
-				7E425249AA903CD0BCFFF65FDE320D7C /* BaseDestination.swift */,
-				28A6D93D7A86A8852AE6402091A78C72 /* BaseQueuedDestination.swift */,
-				1F35D7A3C11F151159E2FBA81F19C940 /* ConsoleDestination.swift */,
-				0896AF58BC4D955D678EA98564628392 /* DestinationProtocol.swift */,
-				EF190F49F11AD7F8AEA153839974243C /* DevFilter.swift */,
-				699686371BA2DC3257E995166636490A /* DispatchQueue+XCGAdditions.swift */,
-				93D906D9BE608FFD6C5546E94A262EEF /* FileDestination.swift */,
-				354367530894D96272D493807DD4F32B /* FileNameFilter.swift */,
-				E06C6FA54EBD801AC43FF10EF4A5397A /* FilterProtocol.swift */,
-				D866F0D1B5F59B6E4B094A62C413B3F6 /* HelperFunctions.swift */,
-				7530154853BAFD7CB702700A2E083ED7 /* LogDetails.swift */,
-				79FDB6C20CBA09493360D12A6A80D431 /* LogFormatterProtocol.swift */,
-				6B5263829C6F84B19327767CEED548D0 /* PrePostFixLogFormatter.swift */,
-				CBEA6672AF18D7481FF7EAE70C4B3D06 /* TagFilter.swift */,
-				F8340CC1A43ABFD9F41C3F3076140586 /* TestDestination.swift */,
-				E37F8544195CED6E429BAE0E26BD471E /* URL+XCGAdditions.swift */,
-				1F3F87646FC2A7193DDD324095026F06 /* UserInfoFilter.swift */,
-				EFBFB127258AE8DFDFCE65553124F3C2 /* XCGLogger.swift */,
-				C0C860C81CBB5EEA9FC825BA1BF9F683 /* XcodeColorsLogFormatter.swift */,
-				077D4732E7E2C297E7BA5F47602E02D6 /* Resources */,
+				539CE950735C8E24A18EFB02DF7EFBD5 /* .swift-version */,
 			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		B784FE50210F41C1F93D2BBBEDD29399 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6EBCDA4F42BFFFA47E41B2A901598FD3 /* ObjcExceptionBridging.framework */,
-				D736379407244EF3ABE7E924938C5EF8 /* iOS */,
-			);
-			name = Frameworks;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				B784FE50210F41C1F93D2BBBEDD29399 /* Frameworks */,
-				71B1CCC8591067075F9135B3F730B2A1 /* Pods */,
-				31D9CB91C4E0A6E81C65E9E05A05596B /* Products */,
+				A51668364117FD67E57990066438E0AA /* Frameworks */,
+				AD9E647EEA7C0FC8147BFF112AE2A5DA /* Pods */,
+				F4C27A0C4F19DDB1C9647C7EA59A8609 /* Products */,
 				1E6F0B953E2B098A8A5B600C79755C05 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D26BB34B3A0A59586098FE9CEFE1555B /* ObjcExceptionBridging */ = {
+		E26DCE40B2943F45C863F70C477902F7 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5B886A1FDF6D262EF9166AE418B67E29 /* ObjcExceptionBridging */,
-				D674CB4DD3DB0441247A7AAA5A9D6E47 /* Support Files */,
-			);
-			name = ObjcExceptionBridging;
-			path = ObjcExceptionBridging;
-			sourceTree = "<group>";
-		};
-		D674CB4DD3DB0441247A7AAA5A9D6E47 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				44A6FAE7A8C31DEC4B118A1B04F05AFC /* ObjcExceptionBridging.modulemap */,
-				078297D4E3D46EEC91C038159D1F7BD2 /* ObjcExceptionBridging.xcconfig */,
-				5E851D2852FCBD2116124952AB49F1E7 /* ObjcExceptionBridging-dummy.m */,
-				FBB987EF04899173BE3917DEB0A079B7 /* ObjcExceptionBridging-Info.plist */,
-				C5578D79D66EE50864E2E4676CEA9697 /* ObjcExceptionBridging-prefix.pch */,
-				457967106625894D13235E168FACE62C /* ObjcExceptionBridging-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ObjcExceptionBridging";
-			sourceTree = "<group>";
-		};
-		D736379407244EF3ABE7E924938C5EF8 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				0A152E37C821F783CFE6EE24A0C02A1C /* Foundation.framework */,
+				5B65A010592577C5CEA6D5A2A51D4982 /* ARKit.framework */,
+				6712668B4BBDF4A08E55B6FC621999B2 /* CoreLocation.framework */,
+				9752B863E1E6BF5CFFEDA236956FD504 /* Foundation.framework */,
+				7FB6606D3D7F2A26264AAB8C0052411E /* GLKit.framework */,
+				6E8DC9BEFAC201AD5587081F0CFE2065 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F4A9AEFD731C4BD4C2944196EF63A984 /* Support Files */ = {
+		F4C27A0C4F19DDB1C9647C7EA59A8609 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC1D0616B6FB1D8B3969C707D83EB1E7 /* XCGLogger.modulemap */,
-				1B4BAF0AC981A6003EA449ABDA38C8EF /* XCGLogger.xcconfig */,
-				887F8E0C5ABB05774571FCEBE6C3C277 /* XCGLogger-dummy.m */,
-				008E91B36CFC3C392D04D68F20A50423 /* XCGLogger-Info.plist */,
-				23E54FF4538321E41AE20572C6864745 /* XCGLogger-prefix.pch */,
-				F1D32AA1D131ADF2A45F3161DE7F0A34 /* XCGLogger-umbrella.h */,
+				BC80CC33607CB45FD01F2D0403886415 /* ARCoreLocation.framework */,
+				1CAB16A12A28E8BE749202B03552307A /* ObjcExceptionBridging.framework */,
+				F98A28668345E054F96821F2D01503B1 /* Pods_hackaTUM.framework */,
+				FC21E11599264BC8297EB97354A9423F /* XCGLogger.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/XCGLogger";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F727F552702112671810E44404E3A164 /* ObjcExceptionBridging */ = {
+			isa = PBXGroup;
+			children = (
+				213C4FF10D2B1A3872C6A44FAD676E6A /* ObjcExceptionBridging.h */,
+				1CCEBCF95C3B636B1D6E2C73F941D8DB /* ObjectiveCMarker.m */,
+			);
+			name = ObjcExceptionBridging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +424,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		703E3AB75DCD8CBB2792C58F30082551 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DAF461DC05BC25F9A8667C41BBE60B0 /* Pods-hackaTUM-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD83577E2114CCED0F9791011DFA3022 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,11 +440,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E90C129CB4380768AC03B792A2C2F3EB /* Headers */ = {
+		EAE552DCF21F6F1A40EE39DFC688AC20 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3317BD4EB4367343F6C4E78E115F6AE2 /* Pods-hackaTUM-umbrella.h in Headers */,
+				B2538EDB2DBBFC5A2DCFAC492FFBCC3D /* ARCoreLocation-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,18 +472,19 @@
 		};
 		4EED97EBB98AC23A4984B4992B6E5C30 /* Pods-hackaTUM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BCF05813A60A7B5E53D9155BD4FC277 /* Build configuration list for PBXNativeTarget "Pods-hackaTUM" */;
+			buildConfigurationList = 22548F49A0F4059DD41D7B0B18D1C025 /* Build configuration list for PBXNativeTarget "Pods-hackaTUM" */;
 			buildPhases = (
-				E90C129CB4380768AC03B792A2C2F3EB /* Headers */,
-				EB35699E9F996C81EC7A632D51F3217D /* Sources */,
-				BBEBDBFE9C9B3B58BE864100F4B44757 /* Frameworks */,
-				4D800387B40AA09173C33447FC869270 /* Resources */,
+				703E3AB75DCD8CBB2792C58F30082551 /* Headers */,
+				C38252EB6287C6487C4ED5F5CE3CC551 /* Sources */,
+				DFF48BEEDEF26A92566A88F3D5DAD731 /* Frameworks */,
+				2BBD5FB523CD585BFA691AB1581FE1CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4710C4499C913D53B5985C43982DECCF /* PBXTargetDependency */,
-				F8E5F7A0FA07AE67124176D570721F89 /* PBXTargetDependency */,
+				01352B6F0D3E8EC0905481A763C22949 /* PBXTargetDependency */,
+				256AE57871ECFFD8D3BDEE25E8FEF851 /* PBXTargetDependency */,
+				99B419FAB184FC490D59D17FB8D5D565 /* PBXTargetDependency */,
 			);
 			name = "Pods-hackaTUM";
 			productName = "Pods-hackaTUM";
@@ -410,6 +509,24 @@
 			productReference = 1CAB16A12A28E8BE749202B03552307A /* ObjcExceptionBridging.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E3A6763C07901EF7A15F730C26485FB7 /* ARCoreLocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFEF40F51EF57E96DDEE91E667998BA0 /* Build configuration list for PBXNativeTarget "ARCoreLocation" */;
+			buildPhases = (
+				EAE552DCF21F6F1A40EE39DFC688AC20 /* Headers */,
+				84F465D24816452701134AC66D632779 /* Sources */,
+				4A1106AF2C086B09DF3C2D40718FB0FC /* Frameworks */,
+				721B3D5D148DC4F697B03A81C1981C85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARCoreLocation;
+			productName = ARCoreLocation;
+			productReference = BC80CC33607CB45FD01F2D0403886415 /* ARCoreLocation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -420,7 +537,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -428,10 +545,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 31D9CB91C4E0A6E81C65E9E05A05596B /* Products */;
+			productRefGroup = F4C27A0C4F19DDB1C9647C7EA59A8609 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E3A6763C07901EF7A15F730C26485FB7 /* ARCoreLocation */,
 				746615E9A06AABA6F288B49A10B63E10 /* ObjcExceptionBridging */,
 				4EED97EBB98AC23A4984B4992B6E5C30 /* Pods-hackaTUM */,
 				07AFE6B9C0D64C3222F1B3FAA995664C /* XCGLogger */,
@@ -448,7 +566,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D800387B40AA09173C33447FC869270 /* Resources */ = {
+		2BBD5FB523CD585BFA691AB1581FE1CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		721B3D5D148DC4F697B03A81C1981C85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -471,6 +596,30 @@
 			files = (
 				610954B61008305CA5BEA66EC60A4276 /* ObjcExceptionBridging-dummy.m in Sources */,
 				462E85DD35B03BB72D5B5CF26463316C /* ObjectiveCMarker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F465D24816452701134AC66D632779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C9B9B02FA6562E0C7426DD101DC632D /* ARCoreLocation-dummy.m in Sources */,
+				D405EF1F54661DC4076E147E86C4B219 /* ARLandmark.swift in Sources */,
+				CEE8427BE825AC6E6E22E1C91432AE82 /* ARLandmarker.swift in Sources */,
+				1D54747EA24966C4B92B7D2D5367A501 /* CGRect+Ext.swift in Sources */,
+				BED0DB4E5E0C32629C7A60940F86387A /* InteractiveScene.swift in Sources */,
+				AECC8DECF371BD7B25958E22A5B39B74 /* Matrix.swift in Sources */,
+				3BA57633D4F6D33E617B6B3E50D3C5B5 /* OverlappingARLandmarkStrategy.swift in Sources */,
+				B86D4D8554569006EF74038019633A93 /* SetMerger.swift in Sources */,
+				65FC949DFB0DF8F771F389D11B8C866C /* UIView+Ext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C38252EB6287C6487C4ED5F5CE3CC551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49963B6C6F8576D7BFD844E8242E834E /* Pods-hackaTUM-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,41 +654,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB35699E9F996C81EC7A632D51F3217D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07641B6C53557956B7F930CE23DD4872 /* Pods-hackaTUM-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		01352B6F0D3E8EC0905481A763C22949 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ARCoreLocation;
+			target = E3A6763C07901EF7A15F730C26485FB7 /* ARCoreLocation */;
+			targetProxy = 17DBD5562B0A62DDC88292298C7E7BE3 /* PBXContainerItemProxy */;
+		};
+		256AE57871ECFFD8D3BDEE25E8FEF851 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjcExceptionBridging;
+			target = 746615E9A06AABA6F288B49A10B63E10 /* ObjcExceptionBridging */;
+			targetProxy = 8005E90023D454878B32E9FCB28A702D /* PBXContainerItemProxy */;
+		};
 		3D0A3D0D8778E3E160837FB476B5C993 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ObjcExceptionBridging;
 			target = 746615E9A06AABA6F288B49A10B63E10 /* ObjcExceptionBridging */;
 			targetProxy = 5A3BEBFE31C36297DC598F3E1611E102 /* PBXContainerItemProxy */;
 		};
-		4710C4499C913D53B5985C43982DECCF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ObjcExceptionBridging;
-			target = 746615E9A06AABA6F288B49A10B63E10 /* ObjcExceptionBridging */;
-			targetProxy = DD9C886FCDDD375776E49B2F74F3322A /* PBXContainerItemProxy */;
-		};
-		F8E5F7A0FA07AE67124176D570721F89 /* PBXTargetDependency */ = {
+		99B419FAB184FC490D59D17FB8D5D565 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XCGLogger;
 			target = 07AFE6B9C0D64C3222F1B3FAA995664C /* XCGLogger */;
-			targetProxy = 83E5ABAEA28B19D47CD535985B6FD2C6 /* PBXContainerItemProxy */;
+			targetProxy = 38D717B3C30BD5B30D33AD35B50E6448 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0099717E74F42140041C2B3180D2471F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EEADA3020D0EEA81BD6D77F842C3E78 /* ARCoreLocation.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ARCoreLocation/ARCoreLocation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ARCoreLocation/ARCoreLocation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ARCoreLocation/ARCoreLocation.modulemap";
+				PRODUCT_MODULE_NAME = ARCoreLocation;
+				PRODUCT_NAME = ARCoreLocation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3DBFC510DCDB148B6FF5BFA395096DC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B4BAF0AC981A6003EA449ABDA38C8EF /* XCGLogger.xcconfig */;
+			baseConfigurationReference = 75E3E49014B0ECE40EFF4D171D902244 /* XCGLogger.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -631,11 +815,10 @@
 			};
 			name = Release;
 		};
-		7BC9DE8201355AE1819A69AC6E143EDF /* Debug */ = {
+		6B907BE513FD80D6F06DCBFDC3CD7AB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB1929723AAF3DAA8FBB8E0297198BEF /* Pods-hackaTUM.debug.xcconfig */;
+			baseConfigurationReference = 1EEADA3020D0EEA81BD6D77F842C3E78 /* ARCoreLocation.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -646,23 +829,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ARCoreLocation/ARCoreLocation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ARCoreLocation/ARCoreLocation-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/ARCoreLocation/ARCoreLocation.modulemap";
+				PRODUCT_MODULE_NAME = ARCoreLocation;
+				PRODUCT_NAME = ARCoreLocation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -735,7 +917,7 @@
 		};
 		B191EB6E78EE98F0A88EE273E99ED359 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 078297D4E3D46EEC91C038159D1F7BD2 /* ObjcExceptionBridging.xcconfig */;
+			baseConfigurationReference = E330967920AEED69CD2368EE4E3DA860 /* ObjcExceptionBridging.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -769,7 +951,7 @@
 			};
 			name = Release;
 		};
-		BC222C263F77E54CC25BE618B5D2B5D4 /* Release */ = {
+		C4CBAB89BA201F4AD228909A0F71AE1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A080C6DDDA9E016FA5B4FA60DC93BE14 /* Pods-hackaTUM.release.xcconfig */;
 			buildSettings = {
@@ -808,9 +990,47 @@
 			};
 			name = Release;
 		};
+		DF003F5574C496DE882F5D941274FDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB1929723AAF3DAA8FBB8E0297198BEF /* Pods-hackaTUM.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		FBA810863355AB9F58DDE2BD0E0EC3D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 078297D4E3D46EEC91C038159D1F7BD2 /* ObjcExceptionBridging.xcconfig */;
+			baseConfigurationReference = E330967920AEED69CD2368EE4E3DA860 /* ObjcExceptionBridging.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -845,7 +1065,7 @@
 		};
 		FC0CED9B0D1447453CE6813A79059B9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B4BAF0AC981A6003EA449ABDA38C8EF /* XCGLogger.xcconfig */;
+			baseConfigurationReference = 75E3E49014B0ECE40EFF4D171D902244 /* XCGLogger.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -881,11 +1101,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3BCF05813A60A7B5E53D9155BD4FC277 /* Build configuration list for PBXNativeTarget "Pods-hackaTUM" */ = {
+		22548F49A0F4059DD41D7B0B18D1C025 /* Build configuration list for PBXNativeTarget "Pods-hackaTUM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7BC9DE8201355AE1819A69AC6E143EDF /* Debug */,
-				BC222C263F77E54CC25BE618B5D2B5D4 /* Release */,
+				DF003F5574C496DE882F5D941274FDB5 /* Debug */,
+				C4CBAB89BA201F4AD228909A0F71AE1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -895,6 +1115,15 @@
 			buildConfigurations = (
 				804E13245C9FBBE6A340C555CA8B2B4C /* Debug */,
 				510B057D2E9F059C50D52DA5D90F3ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFEF40F51EF57E96DDEE91E667998BA0 /* Build configuration list for PBXNativeTarget "ARCoreLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B907BE513FD80D6F06DCBFDC3CD7AB4 /* Debug */,
+				0099717E74F42140041C2B3180D2471F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

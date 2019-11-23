@@ -6,13 +6,16 @@ import { PoiService } from './poi.service';
 
 @Injectable()
 export class LocationService {
-    public calculateDistance(location1: LocationDTO, location2: LocationDTO): number {
+    public calculateDistanceInMeters(location1: LocationDTO, location2: LocationDTO): number {
+
         const diff = Math.abs(location1.lat - location2.lat);
 
         const lat =   diff / 2 * 0.01745;
         const dx = 111.3 * cos(lat) * (diff);
         const dy = 111.3 * diff;
 
-        return sqrt(dx * dx + dy * dy);
+        const distanceInKm =  sqrt(dx * dx + dy * dy);
+
+        return distanceInKm * 1000;
     }
 }

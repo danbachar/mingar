@@ -174,50 +174,11 @@
         <scene sceneID="4N9-0Z-5wG">
             <objects>
                 <viewController storyboardIdentifier="locationDetail" modalPresentationStyle="fullScreen" id="wQH-Iu-oe9" customClass="LocationDetailViewController" customModule="hackaTUM" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CGA-CU-DXP">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="u9G-WK-ACQ">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marienplatz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmG-ad-SCc">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="286"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="52"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating is fucked up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz9-Ja-li7">
-                                        <rect key="frame" x="0.0" y="294" width="1024" height="25.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eDM-Kh-PSd">
-                                        <rect key="frame" x="0.0" y="327.5" width="1024" height="128"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kz-VO-W6k">
-                                        <rect key="frame" x="0.0" y="463.5" width="1024" height="304.5"/>
-                                        <mutableString key="text">KURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWAKURWA</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="u9G-WK-ACQ" firstAttribute="leading" secondItem="CGA-CU-DXP" secondAttribute="leading" id="EzN-0Q-cD3"/>
-                            <constraint firstItem="u9G-WK-ACQ" firstAttribute="top" secondItem="CGA-CU-DXP" secondAttribute="top" id="FeN-En-uaX"/>
-                            <constraint firstAttribute="trailing" secondItem="u9G-WK-ACQ" secondAttribute="trailing" id="f9O-9v-030"/>
-                            <constraint firstAttribute="bottom" secondItem="u9G-WK-ACQ" secondAttribute="bottom" id="hG9-5l-2xV"/>
-                        </constraints>
-                    </view>
+                    <size key="freeformSize" width="300" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Duw-TU-A15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471.67968749999994" y="687.5"/>
+            <point key="canvasLocation" x="472" y="688"/>
         </scene>
     </scenes>
     <resources>

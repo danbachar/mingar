@@ -1,5 +1,6 @@
 PODS:
   - ARCoreLocation (0.1.9)
+  - EMAlertController (1.0.2)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
@@ -10,19 +11,22 @@ PODS:
 
 DEPENDENCIES:
   - ARCoreLocation (~> 0.1.9)
+  - EMAlertController
   - XCGLogger (~> 7.0.0)
 
 SPEC REPOS:
   trunk:
     - ARCoreLocation
+    - EMAlertController
     - ObjcExceptionBridging
     - XCGLogger
 
 SPEC CHECKSUMS:
   ARCoreLocation: 40055217f8339952689fae363f54a7f015088a83
+  EMAlertController: 471e4630309e5ae843ef71f502d6b58525b22c60
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: e497a88bd4a2d4f9fdd6660a21f7e28ef49eed57
+PODFILE CHECKSUM: 0531ed89f8099165532dd0a7e6254a80f86703ac
 
 COCOAPODS: 1.8.4

@@ -8,5 +8,6 @@ target 'hackaTUM' do
   # Pods for hackaTUM
   pod 'XCGLogger', '~> 7.0.0'
   pod 'ARCoreLocation', '~> 0.1.9'
-
+  pod 'EMAlertController'
+  
 end

@@ -49,47 +49,8 @@ class ARViewController: UIViewController {
         
         view.addSubview(landmarker.view)
         
-        // add a landmark at current location
-        guard let location = landmarker.locationManager.location else {
-            log.error("Couldn't retrieve the current location")
-            return
-        }
-        
-        guard let image = UIImage(named: "placeholder") else {
-            log.error("Error while loading placeholder image")
-            return
-        }
-        
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Some location"
-        label.textColor = .green
-        label.font = UIFont(name: "TrebuchetMS-Bold", size: 18)
-        
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        view.backgroundColor = .white
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 2
-        view.layer.cornerRadius = 15
-        
-        view.addSubview(label)
-        
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        let location2 = CLLocationCoordinate2DMake(48.2627, 11.6671)
-        
-        let cllocation = CLLocation(coordinate: location2,
-                                    altitude: location.altitude,
-                                    horizontalAccuracy: location.horizontalAccuracy,
-                                    verticalAccuracy: location.verticalAccuracy,
-                                    course: location.course,
-                                    speed: location.speed,
-                                    timestamp: location.timestamp)
-        
-        landmarker.addLandmark(image: image, at: cllocation, completion: nil)
-        landmarker.addLandmark(view: view, at: location, completion: nil)
+        // Add all the necessary landmarks
+        placeLandmarks()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,6 +62,51 @@ class ARViewController: UIViewController {
         super.viewDidLayoutSubviews()
         landmarker.view.frame = view.bounds
         landmarker.scene.size = view.bounds.size
+    }
+    
+    private func placeLandmarks() {
+        log.info("Place landmartks")
+//        // add a landmark at current location
+//        guard let location = landmarker.locationManager.location else {
+//            log.error("Couldn't retrieve the current location")
+//            return
+//        }
+//
+//        guard let image = UIImage(named: "placeholder") else {
+//            log.error("Error while loading placeholder image")
+//            return
+//        }
+//
+//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        label.text = "Some location"
+//        label.textColor = .green
+//        label.font = UIFont(name: "TrebuchetMS-Bold", size: 18)
+//
+//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
+//        view.backgroundColor = .white
+//        view.layer.borderColor = UIColor.black.cgColor
+//        view.layer.borderWidth = 2
+//        view.layer.cornerRadius = 15
+//
+//        view.addSubview(label)
+//
+//        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//
+//        let location2 = CLLocationCoordinate2DMake(48.2627, 11.6671)
+//
+//        let cllocation = CLLocation(coordinate: location2,
+//                                    altitude: location.altitude,
+//                                    horizontalAccuracy: location.horizontalAccuracy,
+//                                    verticalAccuracy: location.verticalAccuracy,
+//                                    course: location.course,
+//                                    speed: location.speed,
+//                                    timestamp: location.timestamp)
+//
+//        landmarker.addLandmark(image: image, at: cllocation, completion: nil)
+//        landmarker.addLandmark(view: view, at: location, completion: nil)
     }
     
     private func format(distance: CLLocationDistance) -> String {

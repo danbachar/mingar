@@ -17,7 +17,6 @@
 		B098A823238956DC00969231 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098A822238956DC00969231 /* KeyboardLayoutConstraint.swift */; };
 		B098A825238959FB00969231 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098A824238959FB00969231 /* MapViewController.swift */; };
 		B0B82F6523895D7F004F58D6 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */; };
-		B0B82F6723895F22004F58D6 /* ARStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */; };
 		B0B82F6C23897052004F58D6 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B82F6B23897052004F58D6 /* ARViewController.swift */; };
 		B0ECFACD2389D0A900E5DE6D /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECFACC2389D0A900E5DE6D /* DataHandler.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,6 @@
 		B098A822238956DC00969231 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		B098A824238959FB00969231 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
-		B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARStoryboard.storyboard; sourceTree = "<group>"; };
 		B0B82F6B23897052004F58D6 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		B0ECFACC2389D0A900E5DE6D /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		C8556A2E02250E6FECB5A455 /* Pods-hackaTUM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackaTUM.release.xcconfig"; path = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +104,7 @@
 		B06F69C52389AB6100B10283 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				B0ECFACC2389D0A900E5DE6D /* DataHandler.swift */,
 				B048029423893943004FECED /* AppDelegate.swift */,
 				B048029623893943004FECED /* SceneDelegate.swift */,
 				B048029F23893947004FECED /* LaunchScreen.storyboard */,
@@ -118,7 +117,6 @@
 			children = (
 				B098A824238959FB00969231 /* MapViewController.swift */,
 				B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */,
-				B0ECFACC2389D0A900E5DE6D /* DataHandler.swift */,
 			);
 			path = Initial;
 			sourceTree = "<group>";
@@ -126,7 +124,6 @@
 		B0B82F6923896251004F58D6 /* AR */ = {
 			isa = PBXGroup;
 			children = (
-				B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */,
 				B0B82F6B23897052004F58D6 /* ARViewController.swift */,
 			);
 			path = AR;
@@ -211,7 +208,6 @@
 			files = (
 				B04802A123893947004FECED /* LaunchScreen.storyboard in Resources */,
 				B048029E23893947004FECED /* Assets.xcassets in Resources */,
-				B0B82F6723895F22004F58D6 /* ARStoryboard.storyboard in Resources */,
 				B048029C23893943004FECED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

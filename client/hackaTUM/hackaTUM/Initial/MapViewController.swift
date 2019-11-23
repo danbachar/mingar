@@ -18,7 +18,6 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var mapView: MKMapView!
     
     // MARK: - Stored properties
-    private var places: [POI] = []
     private let locationManager = CLLocationManager()
     private var currentRadius = 25000000.0
     private var isFirstLocalization = true
@@ -50,7 +49,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     // MARK: - UITableViewDataSource methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return places.count
+        return DataHandler.places.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,7 +57,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             log.error("Couldn't dequeue a reusable cell")
             return UITableViewCell()
         }
-        cell.textLabel?.text = places[indexPath.row].title
+        cell.textLabel?.text = DataHandler.places[indexPath.row].title
         return cell
     }
     
@@ -94,7 +93,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         DataHandler.getAllPOI(in: currentRadius, long: 11.65112, lat: 48.24883).observe(with: {
             switch $0 {
             case let .success(tasks):
-                self.places = tasks
+                DataHandler.places = tasks
                 self.redrawMap()
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -106,7 +105,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     private func redrawMap() {
-        _ = self.places.map { poi in
+        _ = DataHandler.places.map { poi in
 //            log.info("New annotation for poi")
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(poi.lat, poi.long)

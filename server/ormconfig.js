@@ -5,9 +5,9 @@ let config = {
   type: 'postgres',
   host: 'localhost',
   port: 5432,
-  username: 'hunter',
-  password: 'hunter',
-  database: 'hunter',
+  username: 'mingar',
+  password: 'mingar',
+  database: 'mingar',
   synchronize: false,
   schema: 'public',
   extra: {

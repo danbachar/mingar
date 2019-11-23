@@ -1,0 +1,14 @@
+mingar:
+  restart: always
+  image: postgres:12
+  container_name: mingar
+  ports:
+    - "5432:5432"
+  volumes:
+    - ./docker/postgresql:/var/lib/postgresql
+    # - ./postgres.conf:/usr/share/postgresql/postgresql.conf.sample
+  environment:
+    - POSTGRES_USER=mingar
+    - POSTGRES_PASSWORD=mingar
+    - POSTGRES_DB=mingar
+  restart: always

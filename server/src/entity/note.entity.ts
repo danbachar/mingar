@@ -11,8 +11,17 @@ export class Note {
     public creatingUser: User;
 
     @Column()
-    public text: string;
+    public title: string;
 
-    @ManyToOne(() => POI, poi => poi.notes)
-    public poi: POI;
+    @Column()
+    public description: string;
+
+    @Column({type: 'double precision'})
+    public lat: number;
+
+    @Column({type: 'double precision'})
+    public long: number;
+
+    @Column({type: 'double precision'})
+    public attitude: number;
 }

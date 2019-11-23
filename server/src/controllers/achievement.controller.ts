@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 import { AchievementService } from '../services/achievement.service';
 import { Achievement } from '../entity/achievement.entity';
 
@@ -9,5 +9,10 @@ export class AchievementController {
     @Get()
     getAll(): Promise<Achievement[]> {
         return this.achievementService.getAllAchievements();
+    }
+
+    @Post()
+    createAchievement(@Body() achievement: Achievement): Promise<Achievement> {
+        return this.achievementService.createAchievement(achievement);
     }
 }

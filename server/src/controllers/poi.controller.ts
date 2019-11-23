@@ -10,4 +10,7 @@ export class PoiController {
   getAll(): Promise<POI[]> {
     return this.poiService.getAll();
   }
-}
+  @Post(':radius')
+    getNearestPoints(@Param('radius') radius: number, @Body() location: LocationDTO): Promise<POI[]> {
+        return this.poiService.getNearestPois(location, radius);
+    }

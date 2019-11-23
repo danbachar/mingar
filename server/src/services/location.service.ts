@@ -1,6 +1,7 @@
 import { LocationDTO } from './../DTO/location.dto';
 import { Injectable } from '@nestjs/common';
 import { sqrt,cos } from 'mathjs'
+import {POI} from "../entity/poi.entity";
 
 @Injectable()
 export class LocationService {
@@ -12,5 +13,19 @@ export class LocationService {
         return sqrt(dx * dx + dy * dy);
     }
 
-    public getNearestPois(myLocation: LocationDTO)
+    public getNearestPois(myLocation: LocationDTO): POI[] {
+        // change to getallPois
+        let listOfPois: POI[];
+        let sortedArray: POI[];
+
+        sortedArray = listOfPois.sort((n1,n2) => {
+            const n1Location = new LocationDTO(n1.lat, n1.long);
+            const n2Location = new LocationDTO(n2.lat, n2.long);
+
+            return this.calculateDistance(myLocation, n1Location) - this.calculateDistance(myLocation, n2Location);
+        })
+
+
+        return sortedArray;
+    }
 }

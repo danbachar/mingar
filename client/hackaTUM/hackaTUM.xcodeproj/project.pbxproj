@@ -79,22 +79,32 @@
 		B048029323893943004FECED /* hackaTUM */ = {
 			isa = PBXGroup;
 			children = (
+				B06F69C52389AB6100B10283 /* Global */,
 				B0B82F6A23896267004F58D6 /* External */,
 				B0B82F6923896251004F58D6 /* AR */,
 				B0B82F6823896246004F58D6 /* Initial */,
-				B048029423893943004FECED /* AppDelegate.swift */,
-				B048029623893943004FECED /* SceneDelegate.swift */,
-				B048029A23893943004FECED /* Main.storyboard */,
 				B048029D23893947004FECED /* Assets.xcassets */,
-				B048029F23893947004FECED /* LaunchScreen.storyboard */,
 				B04802A223893947004FECED /* Info.plist */,
 			);
 			path = hackaTUM;
 			sourceTree = "<group>";
 		};
+		B06F69C52389AB6100B10283 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				B048029423893943004FECED /* AppDelegate.swift */,
+				B048029623893943004FECED /* SceneDelegate.swift */,
+				B048029F23893947004FECED /* LaunchScreen.storyboard */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		B0B82F6823896246004F58D6 /* Initial */ = {
 			isa = PBXGroup;
 			children = (
+				B048029A23893943004FECED /* Main.storyboard */,
+				B098A824238959FB00969231 /* MapViewController.swift */,
+				B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */,
 			);
 			path = Initial;
 			sourceTree = "<group>";
@@ -112,8 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				B098A822238956DC00969231 /* KeyboardLayoutConstraint.swift */,
-				B098A824238959FB00969231 /* MapViewController.swift */,
-				B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */,
 			);
 			path = External;
 			sourceTree = "<group>";

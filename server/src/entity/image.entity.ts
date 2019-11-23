@@ -13,5 +13,5 @@ export class Image {
     @ManyToOne(type => POI, poi => poi.images)
     public poi: POI;
 
-    // achievment?
+    // achievement?
 }

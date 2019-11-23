@@ -1,5 +1,5 @@
 import { Model } from './model.entity';
-import { Achievment } from './achievment.entity';
+import { Achievement } from './achievement.entity';
 import { Image } from './image.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToMany, JoinTable, OneToOne } from 'typeorm';
 import { User } from './user.entity';
@@ -28,9 +28,9 @@ export class POI {
     @Column({type: 'double precision', default: 0 })
     public ranking: number;
 
-    @ManyToMany(() => Achievment, achv => achv.pois)
+    @ManyToMany(() => Achievement, achv => achv.pois)
     @JoinTable()
-    public achievments: Achievment[];
+    public achievements: Achievement[];
 
     @ManyToMany(() => User, user => user.locationHistory)
     public usersVisited: User[];

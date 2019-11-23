@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A407DD7A69D5249A6E645DF /* Pods_hackaTUM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501AD3448D605E2F7D78F4AF /* Pods_hackaTUM.framework */; };
+		AC69E8702389EE2000A64052 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69E86F2389EE2000A64052 /* UserViewController.swift */; };
 		B048029523893943004FECED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048029423893943004FECED /* AppDelegate.swift */; };
 		B048029723893943004FECED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048029623893943004FECED /* SceneDelegate.swift */; };
 		B048029C23893943004FECED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B048029A23893943004FECED /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		501AD3448D605E2F7D78F4AF /* Pods_hackaTUM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackaTUM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC69E86F2389EE2000A64052 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B048029123893943004FECED /* hackaTUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackaTUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B048029423893943004FECED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B048029623893943004FECED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC69E86E2389EE0000A64052 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AC69E86F2389EE2000A64052 /* UserViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		B048028823893943004FECED = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 				B0B82F6A23896267004F58D6 /* External */,
 				B0B82F6923896251004F58D6 /* AR */,
 				B0B82F6823896246004F58D6 /* Initial */,
+				AC69E86E2389EE0000A64052 /* Profile */,
 				B048029D23893947004FECED /* Assets.xcassets */,
 				B04802A223893947004FECED /* Info.plist */,
 			);
@@ -255,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B098A825238959FB00969231 /* MapViewController.swift in Sources */,
+				AC69E8702389EE2000A64052 /* UserViewController.swift in Sources */,
 				B0ECFACD2389D0A900E5DE6D /* DataHandler.swift in Sources */,
 				B0B82F6523895D7F004F58D6 /* LocationDetailViewController.swift in Sources */,
 				B048029523893943004FECED /* AppDelegate.swift in Sources */,
@@ -406,7 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H45RLDQQ8T;
+				DEVELOPMENT_TEAM = 7PLLZ436SG;
 				INFOPLIST_FILE = hackaTUM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (

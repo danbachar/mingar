@@ -4,7 +4,7 @@ import { Entity, PrimaryGeneratedColumn, Column, OneToOne, ManyToMany } from 'ty
 
 @Entity()
 export class Achievment {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     public id: string;
 
     @Column()

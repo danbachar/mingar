@@ -7,14 +7,14 @@ import { Note } from './note.entity';
 
 @Entity()
 export class POI {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     public id: string;
 
     @Column({ unique: true })
     public title: string;
 
     @Column()
-    public description: number;
+    public description: string;
 
     @OneToMany( () => Image, img => img.poi)
     public images: Image[];
@@ -25,7 +25,7 @@ export class POI {
     @Column({type: 'double precision'})
     public long: number;
 
-    @Column({type: 'double precision'})
+    @Column({type: 'double precision', default: 0 })
     public ranking: number;
 
     @ManyToMany(() => Achievment, achv => achv.pois)

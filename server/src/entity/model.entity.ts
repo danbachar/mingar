@@ -4,7 +4,7 @@ import { POI } from './poi.entity';
 
 @Entity()
 export class Model {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     public id: string;
 
     // TODO: type me

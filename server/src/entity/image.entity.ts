@@ -4,7 +4,7 @@ import { OneToOne, PrimaryGeneratedColumn, Entity, ManyToOne } from 'typeorm';
 
 @Entity()
 export class Image {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     public id: string;
 
     @OneToOne(() => File)

@@ -1,3 +1,3 @@
 export class LocationDTO {
-    constructor(private lat: number, private long: number) { }
+    constructor(public lat: number, public long: number) { }
 }

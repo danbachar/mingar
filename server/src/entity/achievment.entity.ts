@@ -3,7 +3,7 @@ import { Image } from './image.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne, ManyToMany } from 'typeorm';
 
 @Entity()
-export class Achievment {
+export class Achievement {
     @PrimaryGeneratedColumn('uuid')
     public id: string;
 
@@ -16,11 +16,11 @@ export class Achievment {
     @OneToOne(() => Image)
     public image: Image;
 
-    @ManyToMany(() => POI, poi => poi.achievments)
+    @ManyToMany(() => POI, poi => poi.achievements)
     public pois: POI[];
 
     @Column({ default: 0 })
-    public achievmentType: number;
+    public achievementType: number;
 
     @Column()
     public requiredNumberOfPOIs: number;

@@ -1,15 +1,16 @@
-import { Achievment } from '../entity/achievment.entity';
+import { Achievement } from '../entity/achievement.entity';
 import { PoiService } from '../services/poi.service';
 import { Controller, Get, Post, Body, Param, Res } from '@nestjs/common';
 import { POI } from '../entity/poi.entity';
 import { LocationDTO } from 'DTO/location.dto';
-import { AchievmentService } from '../services/achievment.service';
+import { AchievementService } from '../services/achievement.service';
 import { Response } from 'express';
+import { ACHIEVEMENT} from '../enum/achievement-type.enum';
 
 @Controller('/api/poi')
 export class PoiController {
     constructor(private readonly poiService: PoiService,
-                private readonly achievmentServie: AchievmentService) {}
+                private readonly achievementServie: AchievementService) {}
 
   @Get()
   getAll(): Promise<POI[]> {
@@ -23,7 +24,7 @@ export class PoiController {
 
     @Post('visit/:id')
     async markPOIAsVisited(
-      @Param('id') id: string, @Body() location: LocationDTO, @Body() poisVisited: string[], @Res() res: Response): Promise<Achievment[]> {
+      @Param('id') id: string, @Body() location: LocationDTO, @Body() poisVisited: string[], @Res() res: Response): Promise<Achievement[]> {
       const canVisitPOI = await this.poiService.canVisitPOI(id, location);
 
       if (!canVisitPOI) {
@@ -31,43 +32,41 @@ export class PoiController {
         return;
       }
 
-      const achievmentsUnlocked: Achievment[] = [];
+      const achievementsUnlocked: Achievement[] = [];
 
-      const allAchievments = await this.achievmentServie.getAllAchievments();
+      const allAchievements = await this.achievementServie.getAllAchievements();
 
-      const allSpecificAchievments = allAchievments.filter(achv => achv.achievmentType === ACHIEVMENT.Specific);
+      const allSpecificAchievements = allAchievements.filter(achv => achv.achievementType === ACHIEVEMENT.Specific);
 
       poisVisited.push(id);
       poisVisited.sort();
-      // check if any POI-specific achievments were unlocked
-      allSpecificAchievments.map(specificAchievment => {
-        if (specificAchievment.pois.length === poisVisited.length) {
-          const sortedPoiIdsPerAchievment = specificAchievment.pois.map(poi => poi.id).sort();
-          let allPOIsForAchievmentVisited = true;
+      // check if any POI-specific achievements were unlocked
+      allSpecificAchievements.map(specificAchievement => {
+        if (specificAchievement.pois.length === poisVisited.length) {
+          const sortedPoiIdsPerAchievement = specificAchievement.pois.map(poi => poi.id).sort();
+          let allPOIsForAchievementVisited = true;
 
-          for (let index = 0; index < sortedPoiIdsPerAchievment.length; index++) {
-            if (sortedPoiIdsPerAchievment[index] !== poisVisited[index]) {
-              allPOIsForAchievmentVisited = false;
+          for (let index = 0; index < sortedPoiIdsPerAchievement.length; index++) {
+            if (sortedPoiIdsPerAchievement[index] !== poisVisited[index]) {
+              allPOIsForAchievementVisited = false;
               break;
             }
           }
 
-          if (allPOIsForAchievmentVisited) {
-            achievmentsUnlocked.push(specificAchievment);
+          if (allPOIsForAchievementVisited) {
+            achievementsUnlocked.push(specificAchievement);
           }
         }
       });
 
-      const allPois = await this.poiService.getAll();
-      const allCountAchievments = allAchievments.filter(achv => achv.achievmentType === ACHIEVMENT.Count);
+      const allCountAchievements = allAchievements.filter(achv => achv.achievementType === ACHIEVEMENT.Count);
 
-
-      allCountAchievments.map(countAchievment => {
-        if (poisVisited.length >= countAchievment.requiredNumberOfPOIs) {
-          achievmentsUnlocked.push(countAchievment);
+      allCountAchievements.map(countAchievement => {
+        if (poisVisited.length >= countAchievement.requiredNumberOfPOIs) {
+          achievementsUnlocked.push(countAchievement);
         }
       });
 
-      return achievmentsUnlocked;
+      return achievementsUnlocked;
     }
 }

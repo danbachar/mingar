@@ -3,7 +3,7 @@ import { Note } from './../entity/note.entity';
 import { Model } from './../entity/model.entity';
 import { Image } from './../entity/image.entity';
 import { File } from './../entity/file.entity';
-import { Achievment } from './../entity/achievment.entity';
+import { Achievement } from './../entity/achievement.entity';
 import { DbConstants } from 'consts/db.consts';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 import { getConnectionOptions, createConnection, Connection } from 'typeorm';
@@ -26,8 +26,8 @@ export const dbProviders = [
         }
     },
     {
-        provide: DbConstants.ACHIEVMENT_REPOSITORY,
-        useFactory: (connection: Connection) => connection.getRepository(Achievment),
+        provide: DbConstants.ACHIEVEMENT_REPOSITORY,
+        useFactory: (connection: Connection) => connection.getRepository(Achievement),
         inject: [DbConstants.DB_CONNECTION],
     },
     {

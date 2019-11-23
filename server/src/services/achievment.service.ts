@@ -1,14 +1,14 @@
-import { Achievment } from './../entity/achievment.entity';
+import { Achievement } from './../entity/achievement.entity';
 import { Inject } from '@nestjs/common';
 import { DbConstants } from 'consts/db.consts';
 import { Repository } from 'typeorm';
 import { POI } from 'entity/poi.entity';
 
-export class AchievmentService {
+export class AchievementService {
 
-    constructor(@Inject(DbConstants.ACHIEVMENT_REPOSITORY) private readonly achievmentRepo: Repository<Achievment>) { }
+    constructor(@Inject(DbConstants.ACHIEVEMENT_REPOSITORY) private readonly achievementRepo: Repository<Achievement>) { }
 
-    public getAllAchievments(): Promise<Achievment[]> {
-        return this.achievmentRepo.find();
+    public getAllAchievements(): Promise<Achievement[]> {
+        return this.achievementRepo.find();
     }
 }

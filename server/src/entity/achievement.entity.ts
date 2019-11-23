@@ -1,6 +1,7 @@
 import { POI } from './poi.entity';
 import { Image } from './image.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne, ManyToMany } from 'typeorm';
+import { ACHIEVEMENT } from '../enum/achievement-type.enum';
 
 @Entity()
 export class Achievement {
@@ -19,8 +20,8 @@ export class Achievement {
     @ManyToMany(() => POI, poi => poi.achievements)
     public pois: POI[];
 
-    @Column({ default: 0 })
-    public achievementType: number;
+    @Column({ default: ACHIEVEMENT.Count })
+    public achievementType: ACHIEVEMENT;
 
     @Column()
     public requiredNumberOfPOIs: number;

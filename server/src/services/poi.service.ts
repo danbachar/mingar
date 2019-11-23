@@ -4,6 +4,8 @@ import { DbConstants } from './../consts/db.consts';
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { POI } from '../entity/poi.entity';
+import { LoggerFactory } from '../utils/LoggerFactory';
+const logger = LoggerFactory(module);
 
 @Injectable()
 export class PoiService {
@@ -27,15 +29,13 @@ export class PoiService {
     }
 
     public async getNearestPois(myLocation: LocationDTO, withinRadiusInMeters: number): Promise<POI[]> {
-        // change to getallPois
         const listOfPois = await this.getAll();
 
         const filteredArray = listOfPois.filter((poi) => {
             const poiLocation = new LocationDTO(poi.lat, poi.long);
 
             const distance =
-                Math.abs(this.locationService.calculateDistance(myLocation, poiLocation))
-                    * 1000; // this gives back km, convert to meters
+                Math.abs(this.locationService.calculateDistanceInMeters(myLocation, poiLocation));
 
             return distance <= withinRadiusInMeters;
         });
@@ -44,7 +44,8 @@ export class PoiService {
             const n1Location = new LocationDTO(n1.lat, n1.long);
             const n2Location = new LocationDTO(n2.lat, n2.long);
 
-            return this.locationService.calculateDistance(myLocation, n1Location) - this.locationService.calculateDistance(myLocation, n2Location);
+            return this.locationService.calculateDistanceInMeters(myLocation, n1Location) -
+                    this.locationService.calculateDistanceInMeters(myLocation, n2Location);
         });
 
         return sortedArray;
@@ -54,13 +55,27 @@ export class PoiService {
         const poi = await this.poiRepo.findOne(id);
 
         if (!poi) {
+            logger.error('POI not found');
             return false;
         }
 
         const poiLocation: LocationDTO = { long: poi.long, lat: poi.lat };
 
-        const distanceBetweenUserAndPOI = this.locationService.calculateDistance(userLocation, poiLocation);
+        const distanceBetweenUserAndPOI = this.locationService.calculateDistanceInMeters(userLocation, poiLocation);
 
         return distanceBetweenUserAndPOI <= this.MINIMUM_DISTANCE_IN_METERS_TO_VISIT;
+    }
+
+    public async rankPOI(id: string, rank: number): Promise<POI> {
+        const poi = await this.poiRepo.findOne(id);
+
+        if (!poi) {
+            return {} as POI;
+        }
+
+        poi.ranking = poi.ranking != -1 ? (poi.ranking + rank) / 2 : rank;
+        poi.ranking = poi.ranking > 5 ? 5 : poi.ranking;
+        poi.ranking = poi.ranking < 0 ? 0 : poi.ranking;
+        return this.poiRepo.save(poi);
     }
 }

@@ -10,4 +10,8 @@ export class AchievementService {
     public getAllAchievements(): Promise<Achievement[]> {
         return this.achievementRepo.find();
     }
+
+    public createAchievement(achievement: Achievement): Promise<Achievement> {
+        return this.achievementRepo.save(achievement);
+    }
 }

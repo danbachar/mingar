@@ -10,7 +10,6 @@
 		1A407DD7A69D5249A6E645DF /* Pods_hackaTUM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501AD3448D605E2F7D78F4AF /* Pods_hackaTUM.framework */; };
 		B048029523893943004FECED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048029423893943004FECED /* AppDelegate.swift */; };
 		B048029723893943004FECED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048029623893943004FECED /* SceneDelegate.swift */; };
-		B048029923893943004FECED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048029823893943004FECED /* ViewController.swift */; };
 		B048029C23893943004FECED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B048029A23893943004FECED /* Main.storyboard */; };
 		B048029E23893947004FECED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B048029D23893947004FECED /* Assets.xcassets */; };
 		B04802A123893947004FECED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B048029F23893947004FECED /* LaunchScreen.storyboard */; };
@@ -26,7 +25,6 @@
 		B048029123893943004FECED /* hackaTUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackaTUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B048029423893943004FECED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B048029623893943004FECED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B048029823893943004FECED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B048029B23893943004FECED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B048029D23893947004FECED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B04802A023893947004FECED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,20 +79,43 @@
 		B048029323893943004FECED /* hackaTUM */ = {
 			isa = PBXGroup;
 			children = (
+				B0B82F6A23896267004F58D6 /* External */,
+				B0B82F6923896251004F58D6 /* AR */,
+				B0B82F6823896246004F58D6 /* Initial */,
 				B048029423893943004FECED /* AppDelegate.swift */,
 				B048029623893943004FECED /* SceneDelegate.swift */,
-				B048029823893943004FECED /* ViewController.swift */,
 				B048029A23893943004FECED /* Main.storyboard */,
 				B048029D23893947004FECED /* Assets.xcassets */,
 				B048029F23893947004FECED /* LaunchScreen.storyboard */,
 				B04802A223893947004FECED /* Info.plist */,
+			);
+			path = hackaTUM;
+			sourceTree = "<group>";
+		};
+		B0B82F6823896246004F58D6 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		B0B82F6923896251004F58D6 /* AR */ = {
+			isa = PBXGroup;
+			children = (
 				B098A8202389416500969231 /* ARViewController.swift */,
+				B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		B0B82F6A23896267004F58D6 /* External */ = {
+			isa = PBXGroup;
+			children = (
 				B098A822238956DC00969231 /* KeyboardLayoutConstraint.swift */,
 				B098A824238959FB00969231 /* MapViewController.swift */,
 				B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */,
-				B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */,
 			);
-			path = hackaTUM;
+			path = External;
 			sourceTree = "<group>";
 		};
 		D3ACB0131871573092C59E72 /* Pods */ = {
@@ -222,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B048029923893943004FECED /* ViewController.swift in Sources */,
 				B098A825238959FB00969231 /* MapViewController.swift in Sources */,
 				B0B82F6523895D7F004F58D6 /* LocationDetailViewController.swift in Sources */,
 				B048029523893943004FECED /* AppDelegate.swift in Sources */,

@@ -1,6 +1,6 @@
 mingar:
   restart: always
-  image: postgres:12
+  image: postgres:11.5
   container_name: mingar
   ports:
     - "5432:5432"

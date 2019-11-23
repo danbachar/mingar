@@ -93,18 +93,63 @@
         <!--View Controller-->
         <scene sceneID="tTG-4X-eVd">
             <objects>
-                <viewController id="YPQ-iw-ckJ" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="YPQ-iw-ckJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xS7-H9-s31">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Sx-Nu-ovG">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </mapView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkZ-y5-db8">
+                                <rect key="frame" x="48" y="48" width="256" height="384"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q7q-cd-e2Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="384"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kJu-8h-ETd">
+                                            <rect key="frame" x="8" y="8" width="240" height="368"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <prototypes>
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iXR-kr-dRx">
+                                                    <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iXR-kr-dRx" id="ucu-UK-vsc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </tableViewCellContentView>
+                                                </tableViewCell>
+                                            </prototypes>
+                                        </tableView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kJu-8h-ETd" firstAttribute="leading" secondItem="Q7q-cd-e2Z" secondAttribute="leading" constant="8" id="6q5-VF-5Cc"/>
+                                        <constraint firstItem="kJu-8h-ETd" firstAttribute="top" secondItem="Q7q-cd-e2Z" secondAttribute="top" constant="8" id="E1P-gs-9V3"/>
+                                        <constraint firstAttribute="trailing" secondItem="kJu-8h-ETd" secondAttribute="trailing" constant="8" id="cvR-t3-1a9"/>
+                                        <constraint firstAttribute="bottom" secondItem="kJu-8h-ETd" secondAttribute="bottom" constant="8" id="mET-OX-g5D"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Sx-Nu-ovG" firstAttribute="top" secondItem="eYo-lS-oAa" secondAttribute="top" id="06j-86-0Un"/>
+                            <constraint firstItem="dkZ-y5-db8" firstAttribute="height" secondItem="5Sx-Nu-ovG" secondAttribute="height" multiplier="0.5" id="TFX-VE-pEC"/>
+                            <constraint firstItem="eYo-lS-oAa" firstAttribute="bottom" secondItem="5Sx-Nu-ovG" secondAttribute="bottom" id="d0N-T5-Exh"/>
+                            <constraint firstItem="dkZ-y5-db8" firstAttribute="width" secondItem="5Sx-Nu-ovG" secondAttribute="width" multiplier="0.25" id="fmW-FG-V7l"/>
+                            <constraint firstItem="dkZ-y5-db8" firstAttribute="top" secondItem="eYo-lS-oAa" secondAttribute="top" constant="48" id="ikY-yC-Zs6"/>
+                            <constraint firstItem="dkZ-y5-db8" firstAttribute="leading" secondItem="eYo-lS-oAa" secondAttribute="leading" constant="48" id="kWv-dT-nAA"/>
+                            <constraint firstItem="eYo-lS-oAa" firstAttribute="trailing" secondItem="5Sx-Nu-ovG" secondAttribute="trailing" id="wa5-gI-0Js"/>
+                            <constraint firstItem="5Sx-Nu-ovG" firstAttribute="leading" secondItem="eYo-lS-oAa" secondAttribute="leading" id="zne-ch-j9f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eYo-lS-oAa"/>
                     </view>
                     <navigationItem key="navigationItem" id="TJx-dp-QQJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQ3-nX-4YF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-252" y="688"/>
+            <point key="canvasLocation" x="-252.53906249999997" y="687.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4N9-0Z-5wG">

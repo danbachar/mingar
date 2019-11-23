@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationUsageDescription</key>
+	<string>I need location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>I need location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>I need location</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -24,8 +30,6 @@
 	<string>Used to show content in AR</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Test</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Lol</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

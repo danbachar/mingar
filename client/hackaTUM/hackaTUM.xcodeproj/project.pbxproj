@@ -18,6 +18,7 @@
 		B0B82F6523895D7F004F58D6 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */; };
 		B0B82F6723895F22004F58D6 /* ARStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */; };
 		B0B82F6C23897052004F58D6 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B82F6B23897052004F58D6 /* ARViewController.swift */; };
+		B0ECFACD2389D0A900E5DE6D /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECFACC2389D0A900E5DE6D /* DataHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARStoryboard.storyboard; sourceTree = "<group>"; };
 		B0B82F6B23897052004F58D6 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		B0ECFACC2389D0A900E5DE6D /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		C8556A2E02250E6FECB5A455 /* Pods-hackaTUM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackaTUM.release.xcconfig"; path = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM.release.xcconfig"; sourceTree = "<group>"; };
 		D0D4DFE6CD7BDA98F91FD0D2 /* Pods-hackaTUM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackaTUM.debug.xcconfig"; path = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 				B048029A23893943004FECED /* Main.storyboard */,
 				B098A824238959FB00969231 /* MapViewController.swift */,
 				B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */,
+				B0ECFACC2389D0A900E5DE6D /* DataHandler.swift */,
 			);
 			path = Initial;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B098A825238959FB00969231 /* MapViewController.swift in Sources */,
+				B0ECFACD2389D0A900E5DE6D /* DataHandler.swift in Sources */,
 				B0B82F6523895D7F004F58D6 /* LocationDetailViewController.swift in Sources */,
 				B048029523893943004FECED /* AppDelegate.swift in Sources */,
 				B0B82F6C23897052004F58D6 /* ARViewController.swift in Sources */,
@@ -402,14 +406,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				DEVELOPMENT_TEAM = H45RLDQQ8T;
 				INFOPLIST_FILE = hackaTUM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUM;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUMaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -422,14 +426,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				DEVELOPMENT_TEAM = H45RLDQQ8T;
 				INFOPLIST_FILE = hackaTUM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUM;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUMaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

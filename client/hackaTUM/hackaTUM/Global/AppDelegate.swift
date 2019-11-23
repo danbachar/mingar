@@ -8,6 +8,7 @@
 
 import UIKit
 import XCGLogger
+import CoreLocation
 
 // Add the logger
 let log = XCGLogger.default

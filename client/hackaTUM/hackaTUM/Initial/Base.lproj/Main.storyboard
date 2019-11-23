@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Vz-4n-CzD">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -163,6 +163,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="TJx-dp-QQJ"/>
                     <connections>
+                        <outlet property="mapView" destination="5Sx-Nu-ovG" id="am0-oa-NFn"/>
                         <outlet property="tableView" destination="kJu-8h-ETd" id="ISz-9E-Zos"/>
                     </connections>
                 </viewController>

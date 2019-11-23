@@ -45,17 +45,7 @@ class LocationDetailViewController: UIViewController {
 //
 //}
 //
-//struct POI: Decodable {
-//    let photo_credit: String
-//    let description: String
-//    let title: String
-//    let longitude: String
-//    let latitude: String
-//    let url_website: String
-//    let _id: Int
-//    let type: String
-//    let photo_url: String
-//}
+
 //
 //
 //class LocationDetailViewController: UIViewController {

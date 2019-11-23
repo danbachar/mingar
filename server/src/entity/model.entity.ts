@@ -8,7 +8,7 @@ export class Model {
     public id: string;
 
     // TODO: type me
-    @Column()
+    @Column({type: 'jsonb', nullable: true})
     public obj3d: any;
 
     @OneToOne(() => File)

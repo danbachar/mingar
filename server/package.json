@@ -22,8 +22,11 @@
   "dependencies": {
     "@nestjs/common": "^5.1.0",
     "@nestjs/core": "^5.1.0",
+    "pg": "^7.14.0",
+    "pg-connection-string": "^2.1.0",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.2.2",
+    "typeorm": "^0.2.20",
     "typescript": "^3.0.1",
     "winston": "^3.2.1"
   },

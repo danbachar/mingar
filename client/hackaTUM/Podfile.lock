@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: 6b1cb1ec3ae443813fc5df37207a82ab17566db6
+PODS:
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - XCGLogger (7.0.0):
+    - XCGLogger/Core (= 7.0.0)
+  - XCGLogger/Core (7.0.0):
+    - ObjcExceptionBridging
+
+DEPENDENCIES:
+  - XCGLogger (~> 7.0.0)
+
+SPEC REPOS:
+  trunk:
+    - ObjcExceptionBridging
+    - XCGLogger
+
+SPEC CHECKSUMS:
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
+
+PODFILE CHECKSUM: 26c34cad7dbb12e3c9008d170604d912e570ec8a
 
 COCOAPODS: 1.8.4

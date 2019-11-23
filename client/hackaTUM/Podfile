@@ -6,5 +6,6 @@ target 'hackaTUM' do
   use_frameworks!
 
   # Pods for hackaTUM
+  pod 'XCGLogger', '~> 7.0.0'
 
 end

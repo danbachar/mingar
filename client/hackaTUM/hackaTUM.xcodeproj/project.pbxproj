@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		B04802A123893947004FECED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B048029F23893947004FECED /* LaunchScreen.storyboard */; };
 		B098A8212389416500969231 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098A8202389416500969231 /* ARViewController.swift */; };
 		B098A823238956DC00969231 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098A822238956DC00969231 /* KeyboardLayoutConstraint.swift */; };
+		B098A825238959FB00969231 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098A824238959FB00969231 /* MapViewController.swift */; };
+		B0B82F6523895D7F004F58D6 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */; };
+		B0B82F6723895F22004F58D6 /* ARStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		B04802A223893947004FECED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B098A8202389416500969231 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		B098A822238956DC00969231 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		B098A824238959FB00969231 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARStoryboard.storyboard; sourceTree = "<group>"; };
 		C8556A2E02250E6FECB5A455 /* Pods-hackaTUM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackaTUM.release.xcconfig"; path = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM.release.xcconfig"; sourceTree = "<group>"; };
 		D0D4DFE6CD7BDA98F91FD0D2 /* Pods-hackaTUM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackaTUM.debug.xcconfig"; path = "Target Support Files/Pods-hackaTUM/Pods-hackaTUM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +90,9 @@
 				B04802A223893947004FECED /* Info.plist */,
 				B098A8202389416500969231 /* ARViewController.swift */,
 				B098A822238956DC00969231 /* KeyboardLayoutConstraint.swift */,
+				B098A824238959FB00969231 /* MapViewController.swift */,
+				B0B82F6423895D7F004F58D6 /* LocationDetailViewController.swift */,
+				B0B82F6623895F22004F58D6 /* ARStoryboard.storyboard */,
 			);
 			path = hackaTUM;
 			sourceTree = "<group>";
@@ -108,6 +117,7 @@
 				B048028D23893943004FECED /* Sources */,
 				B048028E23893943004FECED /* Frameworks */,
 				B048028F23893943004FECED /* Resources */,
+				99DBDE4D192930A2E2FC5A9F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +168,7 @@
 			files = (
 				B04802A123893947004FECED /* LaunchScreen.storyboard in Resources */,
 				B048029E23893947004FECED /* Assets.xcassets in Resources */,
+				B0B82F6723895F22004F58D6 /* ARStoryboard.storyboard in Resources */,
 				B048029C23893943004FECED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +176,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		99DBDE4D192930A2E2FC5A9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackaTUM/Pods-hackaTUM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackaTUM/Pods-hackaTUM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackaTUM/Pods-hackaTUM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AC7863AA2BD884A4D787415F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B048029923893943004FECED /* ViewController.swift in Sources */,
+				B098A825238959FB00969231 /* MapViewController.swift in Sources */,
+				B0B82F6523895D7F004F58D6 /* LocationDetailViewController.swift in Sources */,
 				B048029523893943004FECED /* AppDelegate.swift in Sources */,
 				B048029723893943004FECED /* SceneDelegate.swift in Sources */,
 				B098A823238956DC00969231 /* KeyboardLayoutConstraint.swift in Sources */,

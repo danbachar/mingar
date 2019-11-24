@@ -1,0 +1,22 @@
+{
+  "name": "mingar",
+  "version": "1.0.0",
+  "license": "custom",
+  "private": true,
+  "engines" : { 
+    "node" : "10.8.0" 
+  },
+  "scripts": {
+    "postinstall": "./build.backend.sh",
+    "start-server": "cd server && yarn run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danbachar/mingar.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/danbachar/mingar/issues"
+  },
+  "homepage": "https://github.com/danbachar/mingar#readme"
+}

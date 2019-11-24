@@ -35,7 +35,7 @@ export class POI {
     @ManyToMany(() => User, user => user.locationHistory)
     public usersVisited: User[];
 
-    @OneToMany(() => Note, note => note.poi)
+    @OneToOne(() => Note)
     public notes: Note[];
 
     @OneToOne(() => Model)

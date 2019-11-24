@@ -45,7 +45,6 @@ $ npm run start:dev
 
 # incremental rebuild (webpack)
 $ npm run webpack
-$ npm run start:hmr
 
 # production mode
 $ npm run start:prod

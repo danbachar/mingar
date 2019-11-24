@@ -13,6 +13,8 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var goToARButton: UIButton!
     @IBOutlet weak var descrLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     
     var selectedPOI: POI?
     
@@ -28,10 +30,23 @@ class LocationDetailViewController: UIViewController {
         goToARButton.backgroundColor = .blue
         goToARButton.layer.cornerRadius = 5
         
-        imageView.backgroundColor = .red
+        titleLabel.text = selectedPOI.title
+        typeLabel.text = "Nice monument"
         
         descrLabel.text = selectedPOI.description
         descrLabel.numberOfLines = 0;
+        
+        self.traitCollectionDidChange(self.traitCollection)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        if self.traitCollection.userInterfaceStyle == .dark {
+            self.view.backgroundColor = .black
+        } else {
+            self.view.backgroundColor = .white
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

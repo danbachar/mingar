@@ -16,10 +16,11 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var visualEffect: UIVisualEffectView!
     
     // MARK: - Stored properties
     private let locationManager = CLLocationManager()
-    private var currentRadius = 25000000.0
+    private var currentRadius = 100.0
     private var isFirstLocalization = true
     private var counter = 2
     
@@ -28,10 +29,13 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+//        tableView.isHidden = true
+        visualEffect.alpha = 0.0
         mapView.delegate = self
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.distanceFilter = 0
-        locationManager.activityType = .automotiveNavigation
+        locationManager.activityType = .fitness
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
@@ -87,13 +91,24 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         self.present(nav, animated: true, completion: nil)
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        log.info("Deselected")
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Places close to you"
+        } else {
+            return ""
+        }
     }
     
     private func updatePlaces() {
         log.info("Fetching the POIs for radius: \(currentRadius)")
-        DataHandler.getAllPOI(in: currentRadius, long: 11.65112, lat: 48.24883).observe(with: {
+        
+        // Get the latest location
+        guard let location = locationManager.location else {
+            log.error("no coordinate found")
+            return
+        }
+        
+        DataHandler.getAllPOI(in: currentRadius, long: location.coordinate.longitude, lat: location.coordinate.latitude).observe(with: {
             switch $0 {
             case let .success(tasks):
                 DataHandler.places = tasks
@@ -129,11 +144,15 @@ extension MapViewController: CLLocationManagerDelegate {
             
             let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(currentLocation.latitude,
                                                                                currentLocation.longitude),
-                                            latitudinalMeters: 500.0,
-                                            longitudinalMeters: 500.0);
+                                            latitudinalMeters: currentRadius * 2.0,
+                                            longitudinalMeters: currentRadius * 2.0);
 
             // Zoom the map to point to the current region
             mapView.setRegion(region, animated: true)
+            // Show the tableView
+            UIView.animate(withDuration: 1.0) {
+                self.visualEffect.alpha = 1.0
+            }
             // Do not set the region manually after the first localization is completed
             isFirstLocalization = false
         }
@@ -151,19 +170,17 @@ extension MapViewController: MKMapViewDelegate {
 
         let loc1 = CLLocation(latitude: center.latitude - span.latitudeDelta * 0.5, longitude: center.longitude)
         let loc2 = CLLocation(latitude: center.latitude + span.latitudeDelta * 0.5, longitude: center.longitude)
-//        let loc3 = CLLocation(latitude: center.latitude, longitude: center.longitude - span.longitudeDelta * 0.5)
-//        let loc4 = CLLocation(latitude: center.latitude, longitude: center.longitude + span.longitudeDelta * 0.5)
 
         // Screen height in meters on map
         let metersInLatitude = loc1.distance(from: loc2)
-        // Screen width in meters on map
-//        let metersInLongitude = loc3.distance(from: loc4)
         
+        // Get the new radius
         let radius = metersInLatitude / 2.0
-//        log.info("currentRadius: \(currentRadius), radius: \(radius)")
+
         if radius / currentRadius > 2.0 {
             // If the new radius is 2 times bigger than the previous one, fetch the data for a bigger area
-//            self.currentRadius = radius
+            self.currentRadius = radius
+            
             if !isFirstLocalization {
                 updatePlaces()
             }
@@ -181,8 +198,29 @@ extension MapViewController: MKMapViewDelegate {
             self.mapView.isRotateEnabled = true
 
             updatePlaces()
-            
-            self.currentRadius = 25000000
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let title = view.annotation?.title else {
+            return
+        }
+        
+        guard let index = (DataHandler.places.firstIndex(where: { poi in
+            poi.title == title
+        })) else {
+            return
+        }
+        
+        let indexPath = IndexPath(item: index, section: 0)
+        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+        
+        guard let coordinate = view.annotation?.coordinate else {
+            return
+        }
+        
+        mapView.setCenter(coordinate, animated: true)
+        
+        tableView(self.tableView, didSelectRowAt: indexPath)
     }
 }

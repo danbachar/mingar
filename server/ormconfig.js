@@ -3,11 +3,11 @@ const parse = require('pg-connection-string').parse;
 let config = {
   name: 'default',
   type: 'postgres',
-  host: 'localhost',
+  host: 'ec2-54-75-238-138.eu-west-1.compute.amazonaws.com',
   port: 5432,
-  username: 'mingar',
-  password: 'mingar',
-  database: 'mingar',
+  username: 'dfnfhecrmnapyr',
+  password: '2fa24829aa853ad93aa9c4dff11b74d0e84489d6c934058ab886d5b06d9e7eb1',
+  database: 'ddltmclcequcb0',
   synchronize: true,
   schema: 'public',
   extra: {

@@ -1,1 +1,1 @@
-web: docker-compose up -d && yarn run start-server 
+web: yarn run start-server 

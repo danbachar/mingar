@@ -14,8 +14,15 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var goToARButton: UIButton!
     @IBOutlet weak var descrLabel: UILabel!
     
+    var selectedPOI: POI?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let selectedPOI = selectedPOI else {
+            log.error("No POI selected")
+            return
+        }
         
         goToARButton.tintColor = .white
         goToARButton.backgroundColor = .blue
@@ -23,7 +30,24 @@ class LocationDetailViewController: UIViewController {
         
         imageView.backgroundColor = .red
         
-        descrLabel.text = "djkfidhsf jdsdhs jkfdhsk fjdks jfkdsj fkdjs kfjds kfjk jsdk jfdks jfksdj fkdsj kfjsk jfk jsdkfj kdsjf kdsjk fjdksj fksj kfjds kfjdksjfk jdskj"
+        descrLabel.text = selectedPOI.description
         descrLabel.numberOfLines = 0;
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailAR" {
+            guard let nav = segue.destination as? UINavigationController else {
+                log.error("ZLE KURWA jest")
+                return
+            }
+            
+            guard let dest = nav.viewControllers.first as? ARViewController else {
+                log.error("Wrong destination of the segue")
+                return
+            }
+            
+            dest.detailedPOI = selectedPOI
+            
+        }
     }
 }

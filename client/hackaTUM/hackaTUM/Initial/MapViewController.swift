@@ -69,6 +69,9 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             return
         }
         
+        // Pass the selected POI to detail view controller
+        popoverContent.selectedPOI = DataHandler.places[indexPath.row]
+        
         let nav = UINavigationController(rootViewController: popoverContent)
         nav.modalPresentationStyle = .popover
         let popover = nav.popoverPresentationController

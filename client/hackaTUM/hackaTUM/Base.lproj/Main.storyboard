@@ -211,6 +211,9 @@
                                                     <constraint firstAttribute="height" constant="67" id="4uZ-OW-9M9"/>
                                                 </constraints>
                                                 <state key="normal" title="Open in AR"/>
+                                                <connections>
+                                                    <segue destination="vtQ-cl-443" kind="presentation" identifier="detailAR" id="EDU-cl-STC"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-Tf-2m6">
                                                 <rect key="frame" x="20" y="213" width="996" height="196"/>
@@ -277,6 +280,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJ1-77-vjj" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1240" y="-116"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nge-mn-kEF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="xfJ-Ow-UZ8" customClass="ARViewController" customModule="hackaTUM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9nY-BH-JOm">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cJJ-MW-gOO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xcy-aw-Vo0">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="dVv-yr-XZm">
+                            <connections>
+                                <action selector="doneAction:" destination="xfJ-Ow-UZ8" id="9Hq-zy-Xeb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Giz-tl-7tc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2913.8671875" y="-116.40625"/>
         </scene>
         <!--User-->
         <scene sceneID="RsU-bt-SdX">
@@ -527,13 +552,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="V4W-r5-J4I" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Twv-Au-ful">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="YPQ-iw-ckJ" kind="relationship" relationship="viewControllers" id="vgt-rY-8Qb"/>
                         <segue destination="cR5-nm-7uO" kind="relationship" relationship="viewControllers" id="OdV-ly-0gc"/>
-                        <segue destination="txY-TH-y7C" kind="relationship" relationship="viewControllers" id="Q9Q-IE-frZ"/>
+                        <segue destination="txY-TH-y7C" kind="relationship" relationship="viewControllers" id="Kk3-D8-JeG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkF-iE-4UF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -550,17 +576,36 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="RyD-AT-Zcx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AR View" image="camera" catalog="system" selectedImage="camera.fill" id="pUb-Zi-hTQ"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="camera" catalog="system" selectedImage="camera.fill" id="Mei-Va-VXf"/>
                     <navigationItem key="navigationItem" title="Look around to see where the nearest attractions are" leftItemsSupplementBackButton="YES" id="YqG-t0-AWd">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="R9i-rX-x47"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jhp-13-UTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="482" y="1720"/>
+            <point key="canvasLocation" x="482" y="1653"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0xd-4e-MhZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="vtQ-cl-443" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="arrow.left.circle.fill" catalog="system" id="Wmz-lO-SEG">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xfJ-Ow-UZ8" kind="relationship" relationship="rootViewController" id="B6X-TI-2mZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bJ-Sx-xpM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2189.6484375" y="-116.40625"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left.circle.fill" catalog="system" width="64" height="60"/>
         <image name="camera" catalog="system" width="64" height="48"/>
         <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="gear" catalog="system" width="64" height="58"/>

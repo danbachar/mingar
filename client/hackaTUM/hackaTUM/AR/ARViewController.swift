@@ -15,8 +15,11 @@ import ARKit
 class ARViewController: UIViewController {
     // MARK: - Dependencies
     var landmarker: ARLandmarker!
+    var detailedPOI: POI?
     
-    
+    @IBAction func doneAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +31,7 @@ class ARViewController: UIViewController {
         
         // Configure Landmarker
         landmarker.delegate = self
-        landmarker.maximumVisibleDistance = 200 // Only show landmarks within 100m from user.
+        landmarker.maximumVisibleDistance = 200 // Only show landmarks within 200m from user.
         
         // The landmarker can scale views so that closer ones appear larger than further ones. This scaling is linear
         // from 0 to `maxViewScaleDistance`.
@@ -65,48 +68,78 @@ class ARViewController: UIViewController {
     }
     
     private func placeLandmarks() {
-        log.info("Place landmartks")
-//        // add a landmark at current location
-//        guard let location = landmarker.locationManager.location else {
-//            log.error("Couldn't retrieve the current location")
-//            return
-//        }
-//
-//        guard let image = UIImage(named: "placeholder") else {
-//            log.error("Error while loading placeholder image")
-//            return
-//        }
-//
-//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        label.text = "Some location"
-//        label.textColor = .green
-//        label.font = UIFont(name: "TrebuchetMS-Bold", size: 18)
-//
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-//        view.backgroundColor = .white
-//        view.layer.borderColor = UIColor.black.cgColor
-//        view.layer.borderWidth = 2
-//        view.layer.cornerRadius = 15
-//
-//        view.addSubview(label)
-//
-//        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//
-//        let location2 = CLLocationCoordinate2DMake(48.2627, 11.6671)
-//
-//        let cllocation = CLLocation(coordinate: location2,
-//                                    altitude: location.altitude,
-//                                    horizontalAccuracy: location.horizontalAccuracy,
-//                                    verticalAccuracy: location.verticalAccuracy,
-//                                    course: location.course,
-//                                    speed: location.speed,
-//                                    timestamp: location.timestamp)
-//
-//        landmarker.addLandmark(image: image, at: cllocation, completion: nil)
-//        landmarker.addLandmark(view: view, at: location, completion: nil)
+        log.info("Placing all the landmarks")
+        // Retrieve the current location, to get the altitude for every point
+        guard let location = landmarker.locationManager.location else {
+            log.error("Couldn't retrieve the current location")
+            return
+        }
+
+        guard let image = UIImage(named: "placeholder") else {
+            log.error("Error while loading placeholder image")
+            return
+        }
+        
+        // If we want to display a detail POI, make other landmarks less visible by applying some translucent effects on them
+        if detailedPOI == nil {
+            _ = DataHandler.places.map({ poi in
+                let cllocation = CLLocation(coordinate: CLLocationCoordinate2DMake(poi.lat, poi.long),
+                                            altitude: location.altitude,
+                                            horizontalAccuracy: location.horizontalAccuracy,
+                                            verticalAccuracy: location.verticalAccuracy,
+                                            timestamp: location.timestamp)
+                
+                guard let image = UIImage(named: "placeholder") else {
+                    log.error("Error while loading placeholder image")
+                    return
+                }
+                landmarker.addLandmark(image: image, at: cllocation, completion: nil)
+            })
+        } else {
+            guard let detailedPOI = detailedPOI else {
+                log.error("You suck")
+                return
+            }
+            _ = DataHandler.places.map({ poi in
+                let cllocation = CLLocation(coordinate: CLLocationCoordinate2DMake(poi.lat, poi.long),
+                                            altitude: location.altitude,
+                                            horizontalAccuracy: location.horizontalAccuracy,
+                                            verticalAccuracy: location.verticalAccuracy,
+                                            timestamp: location.timestamp)
+                
+                guard let image = UIImage(named: "placeholder") else {
+                    log.error("Error while loading placeholder image")
+                    return
+                }
+                
+                let imageView = UIImageView(image: image)
+                if poi.id != detailedPOI.id {
+                    imageView.alpha = 0.3
+                }
+                
+                landmarker.addLandmark(view: imageView, at: cllocation, completion: nil)
+            })
+        }
+        
+        
+        
+        //        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        //        label.translatesAutoresizingMaskIntoConstraints = false
+        //        view.translatesAutoresizingMaskIntoConstraints = false
+        //        label.text = "Some location"
+        //        label.textColor = .green
+        //        label.font = UIFont(name: "TrebuchetMS-Bold", size: 18)
+        //
+        //        let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
+        //        view.backgroundColor = .white
+        //        view.layer.borderColor = UIColor.black.cgColor
+        //        view.layer.borderWidth = 2
+        //        view.layer.cornerRadius = 15
+        //
+        //        view.addSubview(label)
+        //
+        //        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        //        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     private func format(distance: CLLocationDistance) -> String {

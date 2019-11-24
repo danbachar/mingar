@@ -1,4 +1,3 @@
-import { POI } from './poi.entity';
 import { Entity, ManyToOne, PrimaryGeneratedColumn, Column } from 'typeorm';
 import { User } from './user.entity';
 

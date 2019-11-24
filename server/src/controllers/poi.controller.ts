@@ -1,8 +1,8 @@
 import { Achievement } from '../entity/achievement.entity';
 import { PoiService } from '../services/poi.service';
-import { Controller, Get, Post, Body, Param, Res, Req, Put, Patch } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Res, Req, Patch } from '@nestjs/common';
 import { POI } from '../entity/poi.entity';
-import { LocationDTO } from 'DTO/location.dto';
+import { LocationDTO } from '../DTO/location.dto';
 import { AchievementService } from '../services/achievement.service';
 import { Response, Request } from 'express';
 import { ACHIEVEMENT} from '../enum/achievement-type.enum';
@@ -24,7 +24,7 @@ export class PoiController {
 
   @Post('visit/:id')
   async markPOIAsVisited(
-    @Param('id') id: string, @Req() req: Request, @Res() res: Response): Promise<Achievement[]> {
+    @Param('id') id: string, @Req() req: Request, @Res() res: Response): Promise<void> {
       const body = req.body as { long: number, lat: number, poisVisited: string[] }; // because transmitting primal type(-arrays) is shit in nest
       const location: LocationDTO = { long: body.long, lat: body.lat };
 

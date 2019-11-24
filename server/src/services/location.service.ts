@@ -1,8 +1,6 @@
-import { LocationDTO } from './../DTO/location.dto';
+import { LocationDTO } from '../DTO/location.dto';
 import { Injectable } from '@nestjs/common';
 import { sqrt, cos } from 'mathjs';
-import { POI } from '../entity/poi.entity';
-import { PoiService } from './poi.service';
 
 @Injectable()
 export class LocationService {

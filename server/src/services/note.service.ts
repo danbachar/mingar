@@ -2,7 +2,7 @@ import { LocationService } from './location.service';
 import { LocationDTO } from '../DTO/location.dto';
 import { Note } from '../entity/note.entity';
 import { Inject } from '@nestjs/common';
-import { DbConstants } from 'consts/db.consts';
+import { DbConstants } from '../consts/db.consts';
 import { Repository } from 'typeorm';
 import { User } from '../entity/user.entity';
 import { UserService } from './user.service';

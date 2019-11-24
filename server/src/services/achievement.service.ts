@@ -1,6 +1,6 @@
 import { Achievement } from '../entity/achievement.entity';
 import { Inject } from '@nestjs/common';
-import { DbConstants } from 'consts/db.consts';
+import { DbConstants } from '../consts/db.consts';
 import { Repository } from 'typeorm';
 
 export class AchievementService {

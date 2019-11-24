@@ -4,11 +4,11 @@ import { Model } from './../entity/model.entity';
 import { Image } from './../entity/image.entity';
 import { File } from './../entity/file.entity';
 import { Achievement } from './../entity/achievement.entity';
-import { DbConstants } from 'consts/db.consts';
+import { DbConstants } from '../consts/db.consts';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 import { getConnectionOptions, createConnection, Connection } from 'typeorm';
 import { LoggerFactory } from '../utils/LoggerFactory';
-import { POI } from 'entity/poi.entity';
+import { POI } from '../entity/poi.entity';
 
 const logger = LoggerFactory(module);
 

@@ -80,6 +80,16 @@ class ARViewController: UIViewController {
             return
         }
         
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
+        label.backgroundColor = .white
+        label.layer.cornerRadius = 20
+        label.layer.borderColor = UIColor.cyan.cgColor
+        label.layer.borderWidth = 10
+        label.text = "Placeholder"
+        label.textAlignment = .center
+        label.textColor = .black
+        label.layer.masksToBounds = true
+        
         // If we want to display a detail POI, make other landmarks less visible by applying some translucent effects on them
         if detailedPOI == nil {
             _ = DataHandler.places.map({ poi in
@@ -89,11 +99,13 @@ class ARViewController: UIViewController {
                                             verticalAccuracy: location.verticalAccuracy,
                                             timestamp: location.timestamp)
                 
-                guard let image = UIImage(named: "placeholder") else {
-                    log.error("Error while loading placeholder image")
-                    return
-                }
-                landmarker.addLandmark(image: image, at: cllocation, completion: nil)
+//                guard let image = UIImage(named: "placeholder") else {
+//                    log.error("Error while loading placeholder image")
+//                    return
+//                }
+//                landmarker.addLandmark(image: image, at: cllocation, completion: nil)
+                label.text = poi.title
+                landmarker.addLandmark(view: label, at: cllocation, completion: nil)
             })
         } else {
             guard let detailedPOI = detailedPOI else {
@@ -107,17 +119,22 @@ class ARViewController: UIViewController {
                                             verticalAccuracy: location.verticalAccuracy,
                                             timestamp: location.timestamp)
                 
-                guard let image = UIImage(named: "placeholder") else {
-                    log.error("Error while loading placeholder image")
-                    return
-                }
+//                guard let image = UIImage(named: "placeholder") else {
+//                    log.error("Error while loading placeholder image")
+//                    return
+//                }
+//
+//                let imageView = UIImageView(image: image)
+//                if poi.id != detailedPOI.id {
+//                    imageView.alpha = 0.3
+//                }
                 
-                let imageView = UIImageView(image: image)
                 if poi.id != detailedPOI.id {
-                    imageView.alpha = 0.3
+                    label.alpha = 0.3
                 }
-                
-                landmarker.addLandmark(view: imageView, at: cllocation, completion: nil)
+                label.text = poi.title
+//                landmarker.addLandmark(view: imageView, at: cllocation, completion: nil)
+                landmarker.addLandmark(view: label, at: cllocation, completion: nil)
             })
         }
         
@@ -149,10 +166,12 @@ class ARViewController: UIViewController {
 
 extension ARViewController: ARLandmarkerDelegate {
     func landmarkDisplayer(_ landmarkDisplayer: ARLandmarker, didTap landmark: ARLandmark) {
-//        guard let index = landmark.model?.index else {
-//            return
-//        }
-//        router?.showLandmark(withIndex: index)
+        log.info(landmark.image)
+        log.info("Tapped a landmark")
+        guard let placeholder = UIImage(named: "placeholder") else {
+            return
+        }
+        
     }
     
     func landmarkDisplayer(_ landmarkDisplayer: ARLandmarker, willUpdate landmark: ARLandmark, for location: CLLocation) -> UIView? {

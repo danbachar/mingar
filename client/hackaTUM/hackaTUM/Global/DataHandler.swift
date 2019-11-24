@@ -60,10 +60,13 @@ class Promise<Value>: Future<Value> {
 enum DataHandler {
     static var places: [POI] = []
     
+    static var arrDays: [String] = []
+    static var achivements: [String] = []
+    
     static func getAllPOI(in radius: Double, long: Double, lat: Double) -> Future<[POI]> {
         let session = URLSession(configuration: .default)
         let promise = Promise<[POI]>()
-        guard let url = URL(string: "http://131.159.210.130:3000/api/poi/\(radius)") else {
+        guard let url = URL(string: "https://mingar.herokuapp.com/api/poi/\(radius)") else {
             log.error("Incorrect url")
             promise.reject(with: URLSessionTaskError.incorrentUrl)
             return promise

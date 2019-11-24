@@ -36,6 +36,12 @@ class LocationDetailViewController: UIViewController {
         descrLabel.text = selectedPOI.description
         descrLabel.numberOfLines = 0;
         
+        guard let image = UIImage(named: selectedPOI.title) else {
+            return
+        }
+        
+        imageView.image = image
+        
         self.traitCollectionDidChange(self.traitCollection)
     }
     

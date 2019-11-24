@@ -105,7 +105,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kJu-8h-ETd">
-                                            <rect key="frame" x="8" y="8" width="291" height="486.5"/>
+                                            <rect key="frame" x="8" y="8" width="291" height="486"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <prototypes>
                                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" textLabel="ja4-H0-1Fs" style="IBUITableViewCellStyleDefault" id="iXR-kr-dRx">
@@ -351,8 +351,8 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9h-0M-k9g">
-                                        <rect key="frame" x="314" y="112" width="102.5" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9h-0M-k9g">
+                                        <rect key="frame" x="314" y="112" width="94" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="oDg-dd-RfS"/>
                                         </constraints>
@@ -360,8 +360,8 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Places Visited: 7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o35-lF-mEt">
-                                        <rect key="frame" x="314" y="141" width="143.5" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Places Visited: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o35-lF-mEt">
+                                        <rect key="frame" x="314" y="141" width="144.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="doM-0M-yEu"/>
                                         </constraints>
@@ -532,6 +532,7 @@
                     <connections>
                         <outlet property="bgggLabel" destination="ssk-Em-a5z" id="rVO-YD-FoR"/>
                         <outlet property="collectionView" destination="pQt-bs-7aj" id="Xqm-HT-gJt"/>
+                        <outlet property="placesVisited" destination="o35-lF-mEt" id="lDT-Gx-Ihg"/>
                         <outlet property="profileBg" destination="dA6-sh-97X" id="DGi-i0-XSz"/>
                         <outlet property="profileFg" destination="3qF-6d-c1y" id="GXk-ah-nJ4"/>
                         <outlet property="tableView" destination="s0Q-0p-dy3" id="grP-CG-G5z"/>

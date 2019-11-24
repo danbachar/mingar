@@ -16,10 +16,8 @@ class CollectionViewCell : UICollectionViewCell {
 class UserViewController: UIViewController, UICollectionViewDataSource {
     
     let reuseIdentifier = "collectionViewCellId"
-    var arrDays = ["Marienplatz","Feldherrnhalle","Rathaus","Residenz Museum","Frauenkirche","Friedensengel","Maximilianeum"]
-    var achivements = ["ach1","ach2","ach3","ach4","ach5","ach6","ach7","ach8","ach9","ach10","ach11"]
-
     
+    @IBOutlet weak var placesVisited: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -60,6 +58,10 @@ class UserViewController: UIViewController, UICollectionViewDataSource {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.placesVisited.text = "PlacesVisited: \(DataHandler.arrDays.count)"
+    }
 
     /*
     // MARK: - Navigation
@@ -79,13 +81,13 @@ extension UserViewController: UICollectionViewDelegate{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return achivements.count
+        return DataHandler.achivements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
         
-        cell.imageView.image = UIImage(named: achivements[indexPath.row])
+        cell.imageView.image = UIImage(named: DataHandler.achivements[indexPath.row])
         
         return cell
     }
@@ -95,7 +97,7 @@ extension UserViewController: UICollectionViewDelegate{
 extension UserViewController: UITableViewDelegate,UITableViewDataSource{
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrDays.count + 1
+        return DataHandler.arrDays.count + 1
     }
 
     // create a cell for each table view row
@@ -106,10 +108,10 @@ extension UserViewController: UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
 
         // set the text from the data model
-        if (indexPath.row >= arrDays.count) {
+        if (indexPath.row >= DataHandler.arrDays.count) {
             cell.textLabel?.text = ""
         } else {
-            cell.textLabel?.text = arrDays[indexPath.row]
+            cell.textLabel?.text = DataHandler.arrDays[indexPath.row]
         }
 
         return cell

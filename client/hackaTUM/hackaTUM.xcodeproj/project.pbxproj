@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		501AD3448D605E2F7D78F4AF /* Pods_hackaTUM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackaTUM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC69E86F2389EE2000A64052 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		B048029123893943004FECED /* hackaTUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackaTUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B048029123893943004FECED /* mingAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mingAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B048029423893943004FECED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B048029623893943004FECED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B048029B23893943004FECED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		B048029223893943004FECED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B048029123893943004FECED /* hackaTUM.app */,
+				B048029123893943004FECED /* mingAR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 			);
 			name = hackaTUM;
 			productName = hackaTUM;
-			productReference = B048029123893943004FECED /* hackaTUM.app */;
+			productReference = B048029123893943004FECED /* mingAR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -422,7 +422,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUMaal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = mingAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.www1.hackaTUM.hackaTUMaal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = mingAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -11,11 +11,56 @@ import ARCoreLocation
 import CoreLocation
 import SpriteKit
 import ARKit
+import EMAlertController
 
 class ARViewController: UIViewController {
     // MARK: - Dependencies
     var landmarker: ARLandmarker!
     var detailedPOI: POI?
+    
+    @IBAction func leaveNote(_ sender: Any) {
+        let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter text..."
+            textField.isSecureTextEntry = false
+        }
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { [weak alertController] _ in
+            guard let alertController = alertController, let textField = alertController.textFields?.first else { return }
+            
+            // Place the note here
+            guard let location = self.landmarker.locationManager.location else {
+                log.error("Couldn't retrieve the current location")
+                return
+            }
+            
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
+            label.backgroundColor = .white
+            label.layer.cornerRadius = 20
+            label.layer.borderColor = UIColor.red.cgColor
+            label.layer.borderWidth = 10
+            label.text = ">Note<"
+            label.textAlignment = .center
+            label.textColor = .black
+            label.layer.masksToBounds = true
+            
+            let cllocation = CLLocation(coordinate: CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude),
+                                        altitude: location.altitude,
+                                        horizontalAccuracy: location.horizontalAccuracy,
+                                        verticalAccuracy: location.verticalAccuracy,
+                                        timestamp: location.timestamp)
+            
+            label.text = textField.text
+            self.landmarker.addLandmark(view: label, at: cllocation, completion: nil)
+        }
+        
+        alertController.addAction(confirmAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
     
     @IBAction func doneAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -98,14 +143,8 @@ class ARViewController: UIViewController {
                                             horizontalAccuracy: location.horizontalAccuracy,
                                             verticalAccuracy: location.verticalAccuracy,
                                             timestamp: location.timestamp)
-                
-//                guard let image = UIImage(named: "placeholder") else {
-//                    log.error("Error while loading placeholder image")
-//                    return
-//                }
-//                landmarker.addLandmark(image: image, at: cllocation, completion: nil)
                 label.text = poi.title
-                landmarker.addLandmark(view: label, at: cllocation, completion: nil)
+                landmarker.addLandmark(userInfo: ["title": "\(poi.title)"], view: label, at: cllocation, completion: nil)
             })
         } else {
             guard let detailedPOI = detailedPOI else {
@@ -119,44 +158,13 @@ class ARViewController: UIViewController {
                                             verticalAccuracy: location.verticalAccuracy,
                                             timestamp: location.timestamp)
                 
-//                guard let image = UIImage(named: "placeholder") else {
-//                    log.error("Error while loading placeholder image")
-//                    return
-//                }
-//
-//                let imageView = UIImageView(image: image)
-//                if poi.id != detailedPOI.id {
-//                    imageView.alpha = 0.3
-//                }
-                
                 if poi.id != detailedPOI.id {
                     label.alpha = 0.3
                 }
                 label.text = poi.title
-//                landmarker.addLandmark(view: imageView, at: cllocation, completion: nil)
-                landmarker.addLandmark(view: label, at: cllocation, completion: nil)
+                landmarker.addLandmark(userInfo: ["title": "\(poi.title)"], view: label, at: cllocation, completion: nil)
             })
         }
-        
-        
-        
-        //        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        //        label.translatesAutoresizingMaskIntoConstraints = false
-        //        view.translatesAutoresizingMaskIntoConstraints = false
-        //        label.text = "Some location"
-        //        label.textColor = .green
-        //        label.font = UIFont(name: "TrebuchetMS-Bold", size: 18)
-        //
-        //        let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        //        view.backgroundColor = .white
-        //        view.layer.borderColor = UIColor.black.cgColor
-        //        view.layer.borderWidth = 2
-        //        view.layer.cornerRadius = 15
-        //
-        //        view.addSubview(label)
-        //
-        //        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        //        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     private func format(distance: CLLocationDistance) -> String {
@@ -166,11 +174,45 @@ class ARViewController: UIViewController {
 
 extension ARViewController: ARLandmarkerDelegate {
     func landmarkDisplayer(_ landmarkDisplayer: ARLandmarker, didTap landmark: ARLandmark) {
-        log.info(landmark.image)
-        log.info("Tapped a landmark")
-        guard let placeholder = UIImage(named: "placeholder") else {
+        guard let title = landmark.userInfo["title"] as? String else {
+            log.error("No userInfo set at landmark")
             return
         }
+        
+        DataHandler.counter = DataHandler.counter + 1
+        
+        if DataHandler.counter == 1 {
+            let alert = EMAlertController(title: "New achievement",
+                                          message: """
+                                                    You did it! There is a new achievement for you!
+                                                    First Blood!
+                                                    """)
+            let yeah = EMAlertAction(title: "YEAH",
+                                     style: .normal)
+            
+            let icon = UIImage(named: "ach1")
+            DataHandler.achivements.append("ach1")
+            DataHandler.arrDays.append(title)
+            alert.iconImage = icon
+            alert.addAction(yeah)
+            present(alert, animated: true, completion: nil)
+        } else if DataHandler.counter == 3 {
+            let alert = EMAlertController(title: "New achievement",
+                                          message: """
+                                                    You did it! There is a new achievement for you!
+                                                    Classic Munich!
+                                                    """)
+            let yeah = EMAlertAction(title: "YEAH",
+                                     style: .normal)
+            
+            let icon = UIImage(named: "ach5")
+            DataHandler.achivements.append("ach5")
+            DataHandler.arrDays.append(title)
+            alert.iconImage = icon
+            alert.addAction(yeah)
+            present(alert, animated: true, completion: nil)
+        }
+        
         
     }
     

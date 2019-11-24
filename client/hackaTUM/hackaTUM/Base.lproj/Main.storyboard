@@ -293,6 +293,11 @@
                                 <action selector="doneAction:" destination="xfJ-Ow-UZ8" id="9Hq-zy-Xeb"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Leave Note" id="tYh-0z-ZeM">
+                            <connections>
+                                <action selector="leaveNote:" destination="xfJ-Ow-UZ8" id="Crq-ph-5cC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Giz-tl-7tc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

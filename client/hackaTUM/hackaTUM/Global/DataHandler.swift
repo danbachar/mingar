@@ -62,6 +62,7 @@ enum DataHandler {
     
     static var arrDays: [String] = []
     static var achivements: [String] = []
+    static var counter = 0
     
     static func getAllPOI(in radius: Double, long: Double, lat: Double) -> Future<[POI]> {
         let session = URLSession(configuration: .default)
